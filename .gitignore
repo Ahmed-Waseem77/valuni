@@ -1,0 +1,12 @@
+# Ignored files
+
+# pdflatex output files except the pdf 
+
+*.aux 
+*.log
+*.fdb_latexmk 
+*.fls 
+*.synctex.gz 
+
+
+
