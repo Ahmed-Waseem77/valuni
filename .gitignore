@@ -10,4 +10,6 @@
 
 .env 
 
-.cache
+# Any cache files and fdev.js front end dev file
+.cache  
+fdev.js
