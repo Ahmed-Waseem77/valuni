@@ -1,20 +1,6 @@
 
 /* COLOR CONSTANTS */ 
 
-
-:root{ 
- --dark-0:          #0C1F20; 
- --dark-1:          #203435; 
- --dark-2:          #3E5152; 
-
- --light-1:         #E6F1F2; 
- --light-2:         #F1FBFC; 
-
- --acc-blue-dark:   #294158; 
- --acc-blue-light:  #48AFD5; 
- --acc-orange:      #D88E3C;
-}
-
 .App {
   text-align: center;
   min-width: 100%;
