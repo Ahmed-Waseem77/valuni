@@ -1,28 +1,20 @@
-import logo from './logo.svg';
+import logo from './resources/VAL_LOGO_STARTS.svg';
 import './App.css'; 
-import testFirebase from './firebase/config.js';
-
+//import testFirebase from './firebase/config.js';
+/*hi*/
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        > 
-          Learn React
-        </a>
+        <object type="image/svg+xml" data={logo} className="App-logo" alt="logo" >  
+        </object>
       </header>
     </div>
   );
-}
+} 
 
-testFirebase();
+
+
+//testFirebase();
 
 export default App;
