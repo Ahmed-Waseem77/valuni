@@ -8,5 +8,6 @@
 *.fls 
 *.synctex.gz  
 
-.env
+.env 
 
+.cache
