@@ -11,7 +11,6 @@
 .env 
 
 # Any cache files and fdev.js front end dev file
-.cache   
 
-/.expo/web/cache/
-fdev.js
+**/cache/
+*/fdev.js
