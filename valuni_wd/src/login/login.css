@@ -7,11 +7,18 @@
     margin: auto;
 } 
 
+
 .App-logo-type { 
-    height: 3rem;      
+    height: 3vh;      
     opacity: 0%;
-    padding: 1rem; 
-    animation: fadeInForward 0.7s var(--bezier-easeInOut);
+    padding: 1vh;  
+}; 
+
+
+@media (prefers-reduced-motion: no-preference) {  
+  .App-logo-type {
+      animation: fadeInForward 0.7s var(--bezier-easeInOut);
+  } 
 }
 
 .login-form {  
@@ -22,8 +29,6 @@
 } 
 
 .login-background-image { 
-    margin-bottom: -20rem;
-    margin-left: 80rem;
     height: 25rem; 
 
 }
@@ -44,7 +49,9 @@
   
   .login-link {
     color: #61dafb;
-  }
+  } 
+
+
   
 
   
