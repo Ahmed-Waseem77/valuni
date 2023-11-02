@@ -3,21 +3,22 @@
 
 .login { 
     text-align: center;
-    justify-content: center;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto; 
+    min-width:100vw;
 } 
 
 
 .App-logo-type { 
-    height: 3vh;      
+    height: 7vh;      
     opacity: 0%;
-    padding: 1vh;  
-}; 
+    padding: 3vh;  
+}
 
 
 @media (prefers-reduced-motion: no-preference) {  
   .App-logo-type {
-      animation: fadeInForward 0.7s var(--bezier-easeInOut);
+  animation: fadeInForward 0.7s var(--bezier-easeInOut);
   } 
 }
 
@@ -29,12 +30,11 @@
 } 
 
 .login-background-image { 
-    height: 25rem; 
-
+    height: 45vh;  
 }
 
 .App-logo {
-    height: 10rem;
+    height: 20vh;
     pointer-events: none;
   }
   
