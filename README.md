@@ -5,6 +5,10 @@ Software Engineering project for Fall 2023-2024 AUC, Online University Evaluatio
 
 ## How to run 
  1. run the setup.py script in root directory 
-    ~~~ python3 setup.py 
+    ``` 
+    python3 setup.py 
+    ```
  2. set up expo development environment 
-    ~~~ npx expo start --web
+    ``` 
+    npx expo start --web 
+    ```

@@ -2,23 +2,30 @@
 @import url('../ConstColors.css');
 
 .login { 
-    min-width: 100%; 
-    background-color: --dark-1; 
     text-align: center;
     justify-content: center;
     margin: auto;
 } 
 
 .App-logo-type { 
-    height: 10rem;     
+    height: 3rem;      
+    opacity: 0%;
+    padding: 1rem; 
+    animation: fadeInForward 0.7s var(--bezier-easeInOut);
 }
 
 .login-form {  
     align-items: center;
     justify-content: center;
-    color: --dark-0;
     flex: 1; 
     flex-direction: column;
+} 
+
+.login-background-image { 
+    margin-bottom: -20rem;
+    margin-left: 80rem;
+    height: 25rem; 
+
 }
 
 .App-logo {
@@ -28,7 +35,7 @@
   
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
-      animation: fadeIn 2s cubic-bezier(0.7, 0, 0.84, 0) 0s 1 normal forwards;
+    animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
     }
   }
   
@@ -39,14 +46,5 @@
     color: #61dafb;
   }
   
-  @keyframes fadeIn {
-  	0% {
-  		opacity: 0;
-  		transform: translateY(-50px);
-  	}
+
   
-  	100% {
-  		opacity: 1;
-  		transform: translateY(0);
-  	}
-  }
