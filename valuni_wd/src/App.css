@@ -1,4 +1,5 @@
 
+@import url('./ConstColors.css');
 
 body { 
   background-color: var(--light-2);
