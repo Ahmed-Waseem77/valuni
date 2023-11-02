@@ -1,0 +1,29 @@
+{
+  "name": "react-native-app",
+  "version": "1.0.0",
+  "description": "A generator for react-native project's app category.",
+  "files": [
+    "app",
+    "router"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxl20zxl/react-native-app.git"
+  },
+  "keywords": [
+    "react-native-app"
+  ],
+  "author": "yolynn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zxl20zxl/react-native-app/issues"
+  },
+  "homepage": "https://github.com/zxl20zxl/react-native-app#readme",
+  "dependencies": {
+    "yeoman-generator": "^0.22.5"
+  }
+}

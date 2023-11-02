@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@expo/webpack-config": "^19.0.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "expo": "^49.0.16",
+    "expo-constants": "~14.4.2",
+    "html-react-parser": "^5.0.3",
+    "scheduler": "^0.23.0",
+    "react-dom": "18.2.0",
+    "react-native": "^0.72.6",
+    "react-native-app": "^1.0.0",
+    "react-native-web": "~0.19.6",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "metro-config": "^0.80.0"
   }
 }
