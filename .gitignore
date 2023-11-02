@@ -8,5 +8,10 @@
 *.fls 
 *.synctex.gz  
 
-.env
+.env 
 
+# Any cache files and fdev.js front end dev file
+
+**/cache/ 
+**/.cache/
+valuni_wd/src/fdev.js
