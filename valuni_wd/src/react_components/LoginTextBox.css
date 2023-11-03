@@ -1,0 +1,6 @@
+@import url('../ConstColors.css');
+
+.txtbox{
+    display: inline-block;
+    background-color: var(--light-2);
+}
