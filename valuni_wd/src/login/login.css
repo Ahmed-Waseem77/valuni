@@ -1,13 +1,10 @@
 
 @import url('../ConstColors.css');
 
-.login { 
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto; 
-    min-width:100vw;
+.login {  
+    min-width:100vw; 
+    min-height:100vh;
 } 
-
 
 .App-logo-type { 
     height: 7vh;      
@@ -22,11 +19,16 @@
   } 
 }
 
-.login-form {  
-    align-items: center;
-    justify-content: center;
-    flex: 1; 
+.login-form {    
+    display: flex;   
+    min-height: 100vh;
     flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    background-image: url('../resources/VAL_BCKGRD_SPLASH_LGHT.svg'); 
+    background-position: 97% 97%; 
+    background-size: 30%; 
+    background-repeat: no-repeat;
 } 
 
 .login-background-image { 
@@ -36,22 +38,22 @@
 .App-logo {
     height: 20vh;
     pointer-events: none;
-  }
+}
   
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-    animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
-    }
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+  animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
   }
+}
   
-  .login-header {
-  }
-  
-  .login-link {
-    color: #61dafb;
-  } 
+.login-header {
+}
+
+.login-link {
+  color: #61dafb;
+} 
 
 
-  
+
 
   

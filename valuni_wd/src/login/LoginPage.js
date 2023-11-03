@@ -10,15 +10,13 @@ class LoginPage extends React.Component {
             <div className="login">
                 <div className="login-form"> 
                     <object type="image/svg+xml" data={logo} className="App-logo" alt="logo" >  
-                    </object>  <br/>
+                    </object>  
+                    
                     <object type= "image/svg+xml" data={logoType} className="App-logo-type" alt="logoType"> 
                     </object>
-                </div>  
-                <div className="img-container">
-                    <object type="image/svg+xml" data={loginBackgroundImage} className="login-background-image" alt="logo" > 
-                    </object> 
-                </div>
-            </div>
+                </div>   
+            </div> 
+            
         )
     }
 } 
