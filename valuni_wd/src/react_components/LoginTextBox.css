@@ -1,6 +1,99 @@
 @import url('../ConstColors.css');
 
-.txtbox{
-    display: inline-block;
+body{
     background-color: var(--light-2);
+}
+
+
+.txtbox{
+    
+    box-sizing: border-box;
+    padding: 12px 5px;
+    min-width:100vw; 
+    min-height:100vh;
+    
+}
+
+.txtbox .email{
+ 
+    display:grid;
+    grid-gap: 8px;
+    width: 60vw;
+    height: 20vh;
+    
+    padding: 0px 20px;
+    margin: 10px 0;
+}
+
+.txtbox .email input{
+    border: 0.6vh solid;
+    border-radius: 6vh; 
+    border-color: rgb(191, 199, 210);
+    background-color: var(--light-1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+    text-indent: 3%;
+    font-size: X-large;
+    color: var(--dark-1); 
+}
+.txtbox .email input:focus{
+    outline: none;
+}
+.txtbox .email input::placeholsder{
+    text-align: justify;
+    text-indent: 3%;
+    font-size: 115%;
+    color: rgb(116, 132, 150);; 
+    
+}
+.txtbox .email input::-ms-input-placeholsder{
+ 
+    text-align: justify;
+    text-indent: 3%;
+    font-size: 115%;
+    color: rgb(116, 132, 150);;
+}
+.txtbox .email input::-webkit-input-placeholder{
+ 
+    text-align: justify;
+    text-indent: 3%;
+    font-size: 115%;
+    color: rgb(116, 132, 150);;
+}
+.txtbox .email input::-moz-placeholder{
+    text-align: justify;
+    text-indent: 3%;
+    font-size: 115%;
+    color: rgb(116, 132, 150);
+}
+
+.txtbox .email input[type="password"]
+{
+    width: 100%;
+}
+.txtbox .email input[type="password"]:not(:placeholder-shown){
+    font-family: Verdana ;
+    letter-spacing: 0.125em;
+    display: inline;
+    
+}
+.txtbox .eye{
+    display: flex;
+    font-size: x-large;
+}
+
+.txtbox .eye button.btneye{
+   
+    font-size: 120%;
+    color: rgb(116, 132, 150) ;
+    margin-left: -40px; 
+    cursor: pointer;
+    border: 0.6vh solid;
+    border-left: 0;
+    border-radius: 6vh; 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--light-1);
+    border-color: rgb(191, 199, 210);
+    
 }
