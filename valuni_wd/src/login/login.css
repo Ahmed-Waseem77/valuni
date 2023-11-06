@@ -1,50 +1,59 @@
 
 @import url('../ConstColors.css');
 
-.login { 
-    text-align: center;
-    justify-content: center;
-    margin: auto;
+.login {  
+    min-width:100vw; 
+    min-height:100vh;
 } 
 
 .App-logo-type { 
-    height: 3rem;      
+    height: 7vh;      
     opacity: 0%;
-    padding: 1rem; 
-    animation: fadeInForward 0.7s var(--bezier-easeInOut);
+    padding: 3vh;  
 }
 
-.login-form {  
-    align-items: center;
-    justify-content: center;
-    flex: 1; 
+
+@media (prefers-reduced-motion: no-preference) {  
+  .App-logo-type {
+  animation: fadeInForward 0.7s var(--bezier-easeInOut);
+  } 
+}
+
+.login-form {    
+    display: flex;   
+    min-height: 100vh;
     flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    background-image: url('../resources/VAL_BCKGRD_SPLASH_LGHT.svg'); 
+    background-position: 97% 97%; 
+    background-size: 30%; 
+    background-repeat: no-repeat;
 } 
 
 .login-background-image { 
-    margin-bottom: -20rem;
-    margin-left: 80rem;
-    height: 25rem; 
-
+    height: 45vh;  
 }
 
 .App-logo {
-    height: 10rem;
+    height: 20vh;
     pointer-events: none;
-  }
+}
   
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-    animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
-    }
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+  animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
   }
+}
   
-  .login-header {
-  }
-  
-  .login-link {
-    color: #61dafb;
-  }
-  
+.login-header {
+}
+
+.login-link {
+  color: #61dafb;
+} 
+
+
+
 
   

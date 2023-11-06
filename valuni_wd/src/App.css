@@ -1,6 +1,9 @@
 
+@import url('./ConstColors.css');
 
 body { 
-  background-color: var(--light-2);
+  background-color: var(--light-2); 
+  min-height: 100vh; 
+  min-width: 100vw;
 }
 

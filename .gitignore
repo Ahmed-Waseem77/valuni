@@ -15,3 +15,4 @@
 **/cache/ 
 **/.cache/
 valuni_wd/src/fdev.js
+node_modules/
