@@ -1,7 +1,9 @@
 import './login.css';
 import logo from '../resources/VAL_LOGO_STARTS.svg';  
 import logoType from '../resources/VAL_LOGO_TYPE_DRK.svg'; 
-import loginBackgroundImage from '../resources/VAL_BCKGRD_SPLASH_LGHT.svg';
+import { LoginTextBox } from '../react_components/LoginTextbox';
+import { LoginButtonEL } from '../react_components/LoginButton';
+
 import React, {Component} from 'react';
 
 class LoginPage extends React.Component { 
@@ -13,7 +15,10 @@ class LoginPage extends React.Component {
                     </object>  
                     
                     <object type= "image/svg+xml" data={logoType} className="App-logo-type" alt="logoType"> 
-                    </object>
+                    </object> 
+                    <div> <LoginTextBox />  </div>
+                    <div> <LoginButtonEL /> </div>
+
                 </div>   
             </div> 
             

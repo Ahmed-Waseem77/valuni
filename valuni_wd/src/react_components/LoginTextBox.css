@@ -5,95 +5,108 @@ body{
 }
 
 
-.txtbox{
-    
-    box-sizing: border-box;
-    padding: 12px 5px;
-    min-width:100vw; 
-    min-height:100vh;
-    
-}
 
-.txtbox .email{
+#textboxDiv {
  
-    display:grid;
-    grid-gap: 8px;
-    width: 60vw;
-    height: 20vh;
-    
-    padding: 0px 20px;
-    margin: 10px 0;
-}
+    display: flex; 
+    width: 25vw;
+    height: 10vh; 
 
-.txtbox .email input{
-    border: 0.6vh solid;
-    border-radius: 6vh; 
+    margin-bottom: 1em;
+    justify-content: center;  
+    align-items: center;
+    
+    border: 0.18rem solid;
+    border-radius: 2.3rem; 
     border-color: rgb(191, 199, 210);
     background-color: var(--light-1);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: justify;
-    text-indent: 3%;
-    font-size: X-large;
     color: var(--dark-1); 
-}
-.txtbox .email input:focus{
-    outline: none;
-}
-.txtbox .email input::placeholsder{
-    text-align: justify;
-    text-indent: 3%;
-    font-size: 115%;
-    color: rgb(116, 132, 150);; 
-    
-}
-.txtbox .email input::-ms-input-placeholsder{
- 
-    text-align: justify;
-    text-indent: 3%;
-    font-size: 115%;
-    color: rgb(116, 132, 150);;
-}
-.txtbox .email input::-webkit-input-placeholder{
- 
-    text-align: justify;
-    text-indent: 3%;
-    font-size: 115%;
-    color: rgb(116, 132, 150);;
-}
-.txtbox .email input::-moz-placeholder{
-    text-align: justify;
-    text-indent: 3%;
-    font-size: 115%;
-    color: rgb(116, 132, 150);
-}
-
-.txtbox .email input[type="password"]
-{
-    width: 100%;
-}
-.txtbox .email input[type="password"]:not(:placeholder-shown){
-    font-family: Verdana ;
-    letter-spacing: 0.125em;
-    display: inline;
-    
-}
-.txtbox .eye{
-    display: flex;
-    font-size: x-large;
-}
-
-.txtbox .eye button.btneye{
    
-    font-size: 120%;
+} 
+
+.emailContents{ 
+  width: 100%; 
+  height: 100%;
+  display: flex; 
+  flex-direction: row;
+}
+
+.txtbox .textInput { 
+    width: 100%; 
+    height: 100%; 
+
+    font-size: 155%;
     color: rgb(116, 132, 150) ;
-    margin-left: -40px; 
     cursor: pointer;
-    border: 0.6vh solid;
+    border: 0px solid;
     border-left: 0;
     border-radius: 6vh; 
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    background-color: var(--light-1);
-    border-color: rgb(191, 199, 210);
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+    text-align: justify;
+    text-indent: 5%;
+} 
+
+.txtbox .textInput:focus{
+    outline: none;
+}  
+
+.txtbox .textInput::placeholsder{
+    text-align: justify;
+    text-indent: 5%;
+    color: rgb(116, 132, 150);
     
+}
+.txtbox .textInput::-ms-input-placeholsder{
+ 
+    text-align: justify;
+    text-indent: 5%;
+    color: rgb(116, 132, 150);;
+}
+.txtbox .textInput::-webkit-input-placeholder{
+ 
+    text-align: justify;
+    text-indent: 5%;
+    color: rgb(116, 132, 150);;
+}
+.txtbox .textInput::-moz-placeholder{
+    text-align: justify;
+    text-indent: 5%;
+    color: rgb(116, 132, 150);
+}
+
+
+.txtbox .textInput[type="password"]:not(:placeholder-shown){
+    letter-spacing: 0.125em;
+    display: inline;
+    
+} 
+
+
+.txtbox .emailContents button.btneye{
+   
+    font-size: 155%;
+    color: rgb(116, 132, 150) ; 
+    padding-right: 5%; 
+    padding-top: 0.5em;
+    cursor: pointer;
+    border: 0px solid;
+    border-left: 0;
+    border-radius: 6vh; 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+} 
+
+
+
+@media (prefers-reduced-motion: no-preference) {  
+  .txtbox {
+      opacity: 0;
+      animation: fadeInForward 0.7s var(--bezier-easeInOut);
+
+  } 
 }

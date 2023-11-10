@@ -1,17 +1,19 @@
+@import "../ConstColors.css";
+
 .btn{
-    display: inline-block;
     background-color: var(--acc-blue-dark); 
-    color: #fff; 
-    padding: 1vh 2.5vw; 
+    color: var(--light-1); 
+    padding: 1em 1.35vw; 
     border: none;
-    border-radius: 1vh; 
+    border-radius: 1.3rem; 
     cursor: pointer;
     text-align: center;
-    font-size: 1.8vh; 
+    font-size: 2vh; 
     font-weight: bold; 
     text-decoration: none;
     transition: background-color 0.3s ease; 
-    box-shadow: 0.5vw 0.5vh 0.7vw 0 rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.3s ease; 
+    box-shadow: 0.2em 0.2em 0.5em 0 rgba(0, 0, 0, 0.8); 
     }
 
 .btn:active{
@@ -20,5 +22,6 @@
 }
 
 .btn:hover{
-    background-color: #0056b3;
+    background-color: #0056b3; 
+    box-shadow: 0.1em 0.1em 0.3em 0 rgba(0, 0, 0, 0.8); 
 }

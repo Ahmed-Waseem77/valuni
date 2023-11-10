@@ -12,7 +12,7 @@
     --acc-orange:      #D88E3C; 
     
     /* animation beziers */
-    --bezier-easeInOutBack: cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 normal forwards; 
+    --bezier-easeInOutBack: cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 normal both; 
     --bezier-easeInOut:     ease-in-out 1.5s 1 normal forwards;  
 
 } 

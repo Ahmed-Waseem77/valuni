@@ -1,11 +1,14 @@
 import './LoginButton.css';
+import {Homepage} from '../homepage/Homepage';
 import React, {Component} from 'react';
 
 class LoginButtonEL extends React.Component{
     handlePress = () => {
         console.log('Button pressed');
         if (this.props.onPress) {
-          this.props.onPress();
+          this.props.onPress();  
+          this.props.history.push('/HomePage');
+          
         }
       };
     

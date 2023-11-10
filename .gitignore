@@ -8,6 +8,8 @@
 *.fls 
 *.synctex.gz  
 
+.DS_Store
+
 .env 
 
 # Any cache files and fdev.js front end dev file
