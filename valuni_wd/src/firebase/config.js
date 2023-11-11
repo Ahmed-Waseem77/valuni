@@ -4,12 +4,14 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';  // Add this line
 
+
+
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 // AW: 2021-10-10:  Firebase configuration is removed from this file for security reasons.
 const firebaseConfig = {
-  apiKey: "AIzaSyChFnWRgOgVa55H2oa-kDclPwFvVw7mJns",
   authDomain: "val-uni.firebaseapp.com",
   databaseURL: "https://val-uni-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "val-uni",
@@ -26,7 +28,9 @@ const auth = getAuth(app);
 
 // function to Test connectivity to Firebase
 export function testFirebase() {
+  console.log(process.env);
   if (app) {
+    console.log(process.env);
     console.log('Firebase is initialized successfully');
 
     // Test database connectivity
