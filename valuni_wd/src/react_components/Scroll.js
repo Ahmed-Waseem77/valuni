@@ -1,28 +1,123 @@
 import './Scroll.css';
 import React, {Component} from 'react';
+import { CourseBoxes } from './CourseBoxes';
+
+
 
 class Scroll extends  React.Component{
 
     render(){
         return(
             <div className='container'>
-                <div className='txt'>
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                    <input type= "text" />
-                </div>
+
             </div>
         )}
 }
 
-export {Scroll}
+
+
+// export {Scroll}
+
+
+// import React, { Component } from 'react';
+// import Ratings from '../resources/VAL-STAR_FULL.svg'; 
+// import './CourseBoxes.css';
+
+// class CourseBoxes extends React.Component {
+//   render() {
+//     return (
+//       <div className='Container'> 
+        
+//       <div className='flex'>
+//         <div className='CourseBox' id='CourseBox'>
+//           <h1 className='CourseTitle' id='CourseTitle'>CSCE XXXX</h1>
+//           <div className='RatingDetails' id='RatingDetails'> 
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//           </div>
+        
+//           <h2 className='ProfDetails' id='ProfDetails'>Prof. Last Name, First Name </h2>
+//           <div className='RatingDetails' id='RatingDetails'> 
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className='flex'>
+//         <div className='CourseBox' id='CourseBox'>
+//           <h1 className='CourseTitle' id='CourseTitle'>CSCE XXXX</h1>
+//           <div className='RatingDetails' id='RatingDetails'> 
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//           </div>
+        
+//           <h2 className='ProfDetails' id='ProfDetails'>Prof. Last Name, First Name </h2>
+//           <div className='RatingDetails' id='RatingDetails'> 
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className='flex'>
+//         <div className='CourseBox' id='CourseBox'>
+//           <h1 className='CourseTitle' id='CourseTitle'>CSCE XXXX</h1>
+//           <div className='RatingDetails' id='RatingDetails'> 
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//           </div>
+        
+//           <h2 className='ProfDetails' id='ProfDetails'>Prof. Last Name, First Name </h2>
+//           <div className='RatingDetails' id='RatingDetails'> 
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className='flex'>
+//         <div className='CourseBox' id='CourseBox'>
+//           <h1 className='CourseTitle' id='CourseTitle'>CSCE XXXX</h1>
+//           <div className='RatingDetails' id='RatingDetails'> 
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//           </div>
+        
+//           <h2 className='ProfDetails' id='ProfDetails'>Prof. Last Name, First Name </h2>
+//           <div className='RatingDetails' id='RatingDetails'> 
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//             <img src={Ratings} className="Stars" alt="Stars" />  
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//     )
+//   }
+// }
+
+// export { CourseBoxes };
