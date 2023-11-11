@@ -10,10 +10,20 @@
     align-items: center;
     justify-content: center;
     color: var(--dark-2); 
+<<<<<<< HEAD
     height: 5vh;   
     margin: auto;
+=======
+    width: 100em; 
+    height: 3em;
+    overflow: hidden;
+    
+>>>>>>> refs/remotes/origin/dev-f
   }
   
+  .Topbar-wrapper {
+    
+}
 
   .SearchBar {
     display: flex;
