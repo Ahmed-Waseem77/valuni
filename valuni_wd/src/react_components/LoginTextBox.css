@@ -5,11 +5,9 @@ body{
 }
 
 
-
 #textboxDiv {
  
-    display: flex; 
-    width: 25vw;
+    width: 100%;
     height: 10vh; 
 
     margin-bottom: 1em;
@@ -35,7 +33,7 @@ body{
     width: 100%; 
     height: 100%; 
 
-    font-size: 155%;
+    font-size: 3vh;
     color: rgb(116, 132, 150) ;
     cursor: pointer;
     border: 0px solid;
@@ -87,7 +85,7 @@ body{
 
 .txtbox .emailContents button.btneye{
    
-    font-size: 155%;
+    font-size: 3vh;
     color: rgb(116, 132, 150) ; 
     padding-right: 5%; 
     padding-top: 0.5em;
@@ -109,4 +107,5 @@ body{
       animation: fadeInForward 0.7s var(--bezier-easeInOut);
 
   } 
-}
+} 
+

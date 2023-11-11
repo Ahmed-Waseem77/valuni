@@ -16,8 +16,8 @@ class LoginPage extends React.Component {
                     
                     <object type= "image/svg+xml" data={logoType} className="App-logo-type" alt="logoType"> 
                     </object> 
-                    <div> <LoginTextBox />  </div>
-                    <div> <LoginButtonEL /> </div>
+                    <div id="cont"> <LoginTextBox />  </div>
+                    <div id="cont"> <LoginButtonEL /> </div>
 
                 </div>   
             </div> 
