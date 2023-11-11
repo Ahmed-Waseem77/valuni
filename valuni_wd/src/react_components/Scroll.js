@@ -1,6 +1,6 @@
 import './Scroll.css';
 import React, {Component} from 'react';
-import { CourseBoxes } from './CourseBoxes';
+import { CourseBoxArray } from './CourseBoxArray';
 
 
 
@@ -9,7 +9,7 @@ class Scroll extends  React.Component{
     render(){
         return(
             <div className='container'>
-
+                <CourseBoxArray/>
             </div>
         )}
 }
