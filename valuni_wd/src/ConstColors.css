@@ -3,6 +3,7 @@
     --dark-0:          #0C1F20; 
     --dark-1:          #203435; 
     --dark-2:          #3E5152; 
+    --dark-3:          #607374;
    
     --light-1:         #E6F1F2; 
     --light-2:         #F1FBFC; 
@@ -13,9 +14,17 @@
     
     /* animation beziers */
     --bezier-easeInOutBack: cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 normal both; 
-    --bezier-easeInOut:     ease-in-out 1.5s 1 normal forwards;  
+    --bezier-easeInOut:     ease-in-out 1.5s 1 normal forwards;   
 
-} 
+
+}   
+
+#root { 
+display: inline !important;
+width: 100vw !important; 
+height: 100vh !important; 
+}
+
 /* animation keyframes */
 
 @keyframes fadeInBottom {

@@ -39,14 +39,14 @@
     height: 45vh;  
 }
 
-.App-logo {
+.Applogo {
     height: 20vh; 
     width: 100%;
     pointer-events: none;
 }
   
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .Applogo {
   animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
   }
 }
