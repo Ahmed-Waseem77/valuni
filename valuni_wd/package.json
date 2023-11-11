@@ -17,6 +17,7 @@
     "react-native": "^0.72.6",
     "react-native-app": "^1.0.0",
     "react-native-web": "~0.19.6",
+    "react-router-dom": "^6.18.0",
     "react-scripts": "^5.0.1",
     "scheduler": "^0.23.0",
     "web-vitals": "^2.1.4"

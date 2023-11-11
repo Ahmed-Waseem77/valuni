@@ -15,7 +15,7 @@ body{
     align-items: center;
     
     border: 0.18rem solid;
-    border-radius: 2.3rem; 
+    border-radius: 27px; 
     border-color: rgb(191, 199, 210);
     background-color: var(--light-1);
     color: var(--dark-1); 
