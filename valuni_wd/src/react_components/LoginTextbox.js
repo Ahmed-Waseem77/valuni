@@ -14,7 +14,7 @@ class LoginTextBox extends  React.Component{
                     <div className='test' id='textboxDiv'>
                     <div className = "emailContents">
                             <input className='textInput' type="password" placeholder='password'/>
-                            <button type="submit" class="btneye"><FaEye /></button> 
+                            <button type="submit" class="btneye" id="btn" onClick ={this.handleInputPress}><FaEye /></button> 
                     </div> 
                     </div>
                     
