@@ -1,7 +1,7 @@
 import './TopBar.css';
 import React, {Component} from 'react';
 import { FaSearch } from "react-icons/fa";
-import logo from '../resources/VAL_LOGO_STARTS.svg'; 
+import logo from '../resources/VAL-STARS-LOGO-LIGHT.svg'; 
 
 class TopBar extends React.Component{
     handleInputChange = (event) => {
@@ -18,6 +18,7 @@ class TopBar extends React.Component{
     };
     render(){
         return(
+            <div className="Topbar-container">
             <div className = "Topbar" id = "Topbar">
                 <object type="image/svg+xml" data={logo} className="App-logo" alt="logo" >  
                 </object> 
@@ -25,9 +26,10 @@ class TopBar extends React.Component{
                         <input className = 'TxtBar' type="text" onChange={this.handleInputChange} onFocus={this.hadleFocus} placeholder = ""/> 
                         <button type="submit" className="btnSearch" onClick={this.handleButtonClick}><FaSearch /> </button> 
                 </div>
-                <div className='label'>AUC</div>
+                <div className='label'>AUC</div> 
             </div>
-            
+            <div className='inside-corner'> </div>
+            </div>
         )
 
     }

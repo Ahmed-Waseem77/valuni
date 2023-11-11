@@ -1,0 +1,10 @@
+@import '../ConstColors.css'; 
+
+.homepage-container { 
+
+  align-items: center; 
+  justify-content: center;   
+  margin: auto;
+  width: 100vw;
+
+}

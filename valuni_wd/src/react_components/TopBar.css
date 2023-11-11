@@ -3,15 +3,15 @@
 
 .Topbar {
     background-color: var( --dark-1); 
-    padding: 1em;
-    display: flex;
+    padding-top: 1.5vh; 
+    padding-bottom: 1.5vh; 
+    display: flex; 
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     color: var(--dark-2); 
-    width: 100em; 
-    height: 3em;
-    
+    height: 5vh;   
+    margin: auto;
   }
   
 
@@ -19,31 +19,32 @@
     display: flex;
     align-items: center;
     justify-content: center; /* Center the content horizontally within SearchBar */
-    padding: 0.6em;
-    border: 1.5em solid var(--dark-2); /* Change the border color as needed */
-    border: 0.18em solid;
-    border-radius: 2rem; 
+    padding-top: 0.3vh;
+    padding-bottom: 0.3vh;
+    border: 1.5vh solid var(--dark-2); /* Change the border color as needed */
+    border: 0.58vh solid;
+    border-radius: 2vh; 
     border-color: var(--dark-2);
     background-color: var(--dark-2);
     color: var(--dark-1); 
-    width: 40em;
-    height: 1em;
+    width: 40vw;
+    height: 3vh;
   }
   
   /* Styles for the text input */
   .TxtBar {
  
-    width: 70em;
-    height: 2.5em; 
+    width: 70vw;
+    height: 2.5vh; 
 
     
     justify-content: center;  
     align-items: center;
     
     border: 0px solid;
-    border-radius: 2rem; 
-    border-color: var(--dark-2);
-    background-color: var(--dark-2);
+    border-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    
     color: white; 
     font-size: 0.9em;
 
@@ -59,10 +60,11 @@
   /* Optional: Add styles for the icon if you want to customize it */
   .btnSearch{
    
-    font-size: 1.4em;
-    color: rgb(116, 132, 150) ; 
-    padding-right: 0.3em; 
-    padding-top: 0em;
+    font-size: 2.3vh;
+    color: var(--dark-3); 
+    padding-right: 0.4vw; 
+    margin-top: 0.4vh; 
+
     cursor: pointer;
     border: 0em solid;
     border-left: 0em;
@@ -74,21 +76,35 @@
 } 
   
 .App-logo { 
-    display: flex;
-    align-items: center;
-    padding: 0.5em;
-    height: 5em;      
-    width: 5em;
-    margin-left: auto;
-    margin-right: 10em;
+    padding: 0.5vh; 
+    margin-right: 23vw;
+    height: 6vh;      
     /* opacity: 10%; */
     /* padding: 2rem;  */
     
 }
 
 .label{
-    font-size: 2em;
+    font-size: 3vh;
     font-weight: bold;
-    margin-left: 6em;
-    margin-right: auto;
+    margin-left: 23vw;
+} 
+
+.inside-corner { 
+background-color: rgba(0,0,0,0); 
+width: 100%;
+height: 5vh;
+border-radius: 5vw 5vw 0 0; 
+box-shadow: -1px -39px 0px 38px var(--dark-1);
+-webkit-box-shadow: -1px -39px 0px 38px var(--dark-1);
+-moz-box-shadow: -1px -39px 0px 38px var(--dark-1);
+
+} 
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .Topbar-container {
+  animation: fadeInTop ease-in-out 0.5s 1 normal forwards;   
+  }
 }
+
