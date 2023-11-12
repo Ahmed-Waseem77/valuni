@@ -1,6 +1,6 @@
 
 import './App.css';  
-import {devComponent} from './fdev.js';
+//import {devComponent} from './fdev.js';
 
 //import testFirebase from './firebase/config.js';
 
@@ -11,7 +11,12 @@ import { HomePage } from './homepage/Homepage';
 
 function App() {
   return ( 
-      {...devComponent}
+    <div className="App">
+      {/* <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/Home" className= 'Homepage' element={<HomePage />} />
+      </Routes> */}
+    </div>
   );
 } 
 
