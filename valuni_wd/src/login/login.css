@@ -2,14 +2,20 @@
 @import url('../ConstColors.css');
 
 .login {  
-    min-width:100vw; 
-    min-height:100vh;
+    min-width: 100vw; 
+    min-height: 100vh;
+    background-image: url('../resources/VAL_BCKGRD_SPLASH_LGHT.svg'); 
+    background-position: 97% 97%; 
+    background-size: 30%; 
+    background-repeat: no-repeat;
 } 
 
 .App-logo-type { 
     height: 7vh;      
+    width: 100%;
     opacity: 0%;
-    padding: 3vh;  
+    padding-top: 2rem;  
+    padding-bottom: 2rem;  
 }
 
 
@@ -21,33 +27,30 @@
 
 .login-form {    
     display: flex;   
-    min-height: 100vh;
+    min-height: 100vh; 
+    margin-right: 30vw; 
+    margin-left: 30vw;
     flex-direction: column;
     justify-content: center;  
     align-items: center;
-    background-image: url('../resources/VAL_BCKGRD_SPLASH_LGHT.svg'); 
-    background-position: 97% 97%; 
-    background-size: 30%; 
-    background-repeat: no-repeat;
 } 
 
 .login-background-image { 
     height: 45vh;  
 }
 
-.App-logo {
-    height: 20vh;
+.Applogo {
+    height: 20vh; 
+    width: 100%;
     pointer-events: none;
 }
   
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .Applogo {
   animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
   }
 }
   
-.login-header {
-}
 
 .login-link {
   color: #61dafb;

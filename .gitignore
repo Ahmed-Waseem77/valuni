@@ -8,6 +8,8 @@
 *.fls 
 *.synctex.gz  
 
+.DS_Store
+
 .env 
 .DS_Store
 
