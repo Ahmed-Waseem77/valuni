@@ -10,10 +10,11 @@ class CourseBoxes extends React.Component {
   
 
   render() {
-    const { courseName, lastName, firstName } = this.props;
+    const { title, lastName, firstName } = this.props;
     return (
+      <div className='flex'>
       <div className='CourseBox' id='CourseBox'>
-        <h1 className='CourseTitle' id='CourseTitle'>{courseName}</h1>
+        <h1 className='CourseTitle' id='CourseTitle'>{title}</h1>
         <div className='RatingDetails' id='RatingDetails'> 
           <img src={Ratings} className="Stars" alt="Stars" />  
           <img src={Ratings} className="Stars" alt="Stars" />  
@@ -30,6 +31,7 @@ class CourseBoxes extends React.Component {
           <img src={Ratings} className="Stars" alt="Stars" />  
         </div>
       </div>
+      </div>
     )
     // Define prop types for better validation
     CourseBoxes.propTypes = {
@@ -42,4 +44,4 @@ class CourseBoxes extends React.Component {
 
 
 
-export { CourseBox };
+export { CourseBoxes };

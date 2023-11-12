@@ -8,15 +8,13 @@ class Scroll extends  React.Component{
 
     render(){
         return(
-            <div className='container'>
                 <CourseBoxArray/>
-            </div>
         )}
 }
 
 
 
-// export {Scroll}
+export {Scroll}
 
 
 // import React, { Component } from 'react';
