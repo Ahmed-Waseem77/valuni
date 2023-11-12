@@ -2,10 +2,10 @@
 .container{
     display: flex;
     overflow-x: auto;
-    width: 100%;
-    height: 15em; 
-    margin-top: 1em;
-    padding-left:  2em;
+    width: 100vw;
+    height: 25vh; 
+    margin-top: 3vh; 
+    
   }
   .container::-webkit-scrollbar{
     width: 2em;
@@ -25,5 +25,11 @@
   .container::-webkit-scrollbar-track-piece{
     width:2em;
 
+  } 
+
+@media (prefers-reduced-motion: no-preference) {
+  .container {
+  animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
   }
+}
 

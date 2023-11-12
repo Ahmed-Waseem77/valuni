@@ -4,7 +4,21 @@
 
   align-items: center; 
   justify-content: center;   
-  margin: auto;
   width: 100vw;
 
+} 
+
+
+.homepage-title { 
+  text-indent: 1em; 
+  font-size: 2.3em; 
+  font-weight: 700;
+  color: var(--dark-1);
+} 
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .homepage-title {
+  animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
+  }
 }

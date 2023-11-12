@@ -11,7 +11,10 @@ import { HomePage } from './homepage/Homepage';
 
 function App() {
   return ( 
-      {...devComponent}
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/Home" className= 'Homepage' element={<HomePage />} />
+      </Routes>
   );
 } 
 
