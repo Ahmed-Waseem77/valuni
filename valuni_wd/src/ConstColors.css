@@ -1,8 +1,9 @@
 :root{ 
     /* colors */
-    --dark-0:          #0C1F20; 
-    --dark-1:          #203435; 
-    --dark-2:          #3E5152; 
+    --dark-1:          #0C1F20; 
+    --dark-2:          #203435; 
+    --dark-3:          #3E5152; 
+    --dark-4:          #607374;
    
     --light-1:         #E6F1F2; 
     --light-2:         #F1FBFC; 
@@ -12,16 +13,24 @@
     --acc-orange:      #D88E3C; 
     
     /* animation beziers */
-    --bezier-easeInOutBack: cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 normal forwards; 
-    --bezier-easeInOut:     ease-in-out 1.5s 1 normal forwards;  
+    --bezier-easeInOutBack: cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 normal both; 
+    --bezier-easeInOut:     ease-in-out 1.5s 1 normal forwards;   
 
-} 
+
+}   
+
+#root { 
+display: inline !important;
+width: 100vw !important; 
+height: 100vh !important; 
+}
+
 /* animation keyframes */
 
 @keyframes fadeInBottom {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(5vh);
     }
 
     100% {
@@ -33,12 +42,12 @@
 @keyframes fadeInTop {
     0% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-5vh);
     }
 
       100% {
       	opacity: 1;
-      	transform: translateY(0);
+      	transform: translateY(0vh);
     }
 } 
 

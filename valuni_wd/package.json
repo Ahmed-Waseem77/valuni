@@ -1,21 +1,44 @@
 {
-  "name": "valuni_src",
+  "name": "valuni_wd",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
+    "@firebase/app": "^0.9.23",
+    "@firebase/firestore": "^4.3.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-plugin-macros": "^3.1.0",
+    "bootstrap": "^5.3.2",
+    "cors": "^2.8.5",
     "expo": "^49.0.16",
     "expo-constants": "~14.4.2",
+    "express": "^4.18.2",
+    "firebase": "^10.6.0",
+    "fs": "^0.0.1-security",
+    "generate-source-map": "^0.0.5",
     "html-react-parser": "^5.0.3",
-    "scheduler": "^0.23.0",
+    "jsonfile": "^6.1.0",
+    "metro": "^0.80.0",
+    "mime": "^3.0.0",
+    "mysql2": "^3.6.3",
+    "net": "^1.0.2",
+    "process": "^0.11.10",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
     "react-native": "^0.72.6",
     "react-native-app": "^1.0.0",
     "react-native-web": "~0.19.6",
+    "react-router-dom": "^6.18.0",
     "react-scripts": "^5.0.1",
+    "safer-buffer": "^2.1.2",
+    "scheduler": "^0.23.0",
+    "timers": "^0.1.1",
+    "tls": "^0.0.1",
+    "url": "^0.11.3",
+    "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,5 +67,9 @@
   },
   "devDependencies": {
     "metro-config": "^0.80.0"
+  },
+  "browser": {
+    "crypto": false,
+    "stream": false
   }
 }
