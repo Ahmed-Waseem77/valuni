@@ -1,0 +1,32 @@
+[
+  {
+    "CRN": "CSCE 231/2303",
+    "Rating": "4.5",
+    "First_Name": "Cherif ",
+    "Last_Name": "Salama"
+  },
+  {
+    "CRN": "CSCE 253/2501 ",
+    "Rating": "4.0",
+    "First_Name": "Hossam",
+    "Last_Name": "Sharara"
+  },
+  {
+    "CRN": "CSCE 330/3301",
+    "Rating": "3.6",
+    "First_Name": "Cherif ",
+    "Last_Name": "Salama"
+  },
+  {
+    "CRN": "CSCE 341/3701 ",
+    "Rating": "4.0",
+    "First_Name": "Sally",
+    "Last_Name": "El Ghamrawy"
+  },
+  {
+    "CRN": "CSCE 490/4950 ",
+    "Rating": "4.5",
+    "First_Name": "Hossam",
+    "Last_Name": "Sharara"
+  }
+]

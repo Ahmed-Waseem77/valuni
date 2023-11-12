@@ -1,0 +1,21 @@
+# Ignored files
+
+# pdflatex output files except the pdf 
+
+*.aux 
+*.log
+*.fdb_latexmk 
+*.fls 
+*.synctex.gz  
+
+.DS_Store
+
+.env 
+.DS_Store
+
+# Any cache files and fdev.js front end dev file
+
+**/cache/ 
+**/.cache/
+valuni_wd/src/fdev.js
+node_modules/
