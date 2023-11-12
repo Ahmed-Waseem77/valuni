@@ -11,6 +11,7 @@
 .DS_Store
 
 .env 
+.DS_Store
 
 # Any cache files and fdev.js front end dev file
 
