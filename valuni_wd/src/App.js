@@ -6,11 +6,18 @@ import {devComponent} from './fdev.js';
 
 import { LoginPage } from './login/LoginPage';  
 import { Routes, Route } from 'react-router-dom';
-import { HomePage } from './homepage/Homepage';
+import { HomePage } from './homepage/Homepage'; 
 
 
 function App() {
-  return ( 
+
+fetch('http://localhost:3000/data')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  });
+
+  return (  
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/Home" className= 'Homepage' element={<HomePage />} />

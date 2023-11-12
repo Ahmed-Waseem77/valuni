@@ -9,7 +9,10 @@ class HomePage extends React.Component{
     <div className='homepage-container'> 
       <TopBar/>  
       <div className="homepage-title"> COURSES IN YOUR MAJOR  </div>
-      <Scroll/>
+      <Scroll/>  
+      <div className="divider"> </div>
+      <div className="homepage-title"> COURSES YOU HAVE TAKEN  </div>
+      <Scroll/> 
     </div>
     )
   }

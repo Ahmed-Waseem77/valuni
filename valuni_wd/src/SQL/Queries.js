@@ -1,11 +1,18 @@
+
+const fs = require("fs");
 var mysql = require('mysql2');
+const express = require('express'); 
+const jsonfile = require('jsonfile');
+const port = 3005;
+const app = express();
+
 
 var con = mysql.createConnection
 ({
             host: "localhost",
-            user: "root",
-            password: "Heggi_2002",
-            database: "VALUNI"
+            user: "weso",
+            password: "ahmed_2003",
+            database: "valuni"
 });
 var sql =
     "SELECT C.CRN, C.Rating, I.First_Name, I.Last_Name " +
@@ -22,9 +29,34 @@ con.connect(function(err)
     console.log("Connected!");
     con.query(sql, function (err, result)
     {
+        app.get('/data', (req, res) => {
+          const data = {
+            result
+          };
+
+          res.status(200).json(data);
+        }); 
         if (err) throw err;
-        console.log("Result: " + result);
+        console.log("Result: " + result); 
+        
+
+        const filename = 'data.json';
+
+        jsonfile.writeFile(filename, result, { spaces: 2 }, (err) => {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log('Data written successfully');
+          }
+        });
+
         con.end();
     });
-});
+}); 
+
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+}); 
+
 
