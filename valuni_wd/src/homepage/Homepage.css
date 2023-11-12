@@ -21,4 +21,8 @@
   .homepage-title {
   animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
   }
+} 
+
+.divider { 
+margin-bottom: 10vh;
 }
