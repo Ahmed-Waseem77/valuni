@@ -27,9 +27,7 @@ class RatingsBoxesEL extends React.Component {
           <h2 className='Semester' id='Semester'>
             SEM 2X'2X
           </h2>
-          <div className='RatingText' id='RatingText'>
-            AAAAAAAAAAAAAAAAaaaaaaaaaaaanidnieidjeijdiejdijeskndkdkemldmlmldmlemsjndjcnjnjnsknendmedlmeldmlemdkemkdekdnkemdkemkdnek
-          </div>
+          <div className='RatingText' id='RatingText'>{Text}</div>
         </div>
       </div>
     );

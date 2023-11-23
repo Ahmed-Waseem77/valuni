@@ -9,7 +9,7 @@
   text-align: left;
   width: 25rem; 
   margin: 0; 
-
+  height: auto; 
 }
 
 .flex {
@@ -42,16 +42,15 @@
 }
 
 .Semester,
-.ProfDetails,
-.RatingText {
-  margin: 0.2em 0 !important; 
+.ProfDetails{
+  margin: 0.4em 0 !important; 
   font-size: 1em !important;
   color: var(--dark-4) !important;
 }
 
 .RatingText {
   word-wrap: break-word; 
-  font-size: 0.8em; 
+  font-size: 0.9em; 
   color: var(--dark-2);
   margin: 1.2em 0; 
   font-weight: bold;
