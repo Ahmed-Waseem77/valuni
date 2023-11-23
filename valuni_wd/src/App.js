@@ -11,17 +11,18 @@ import { HomePage } from './homepage/Homepage';
 
 function App() {
 
-fetch('http://localhost:3000/data')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-  });
+// fetch('http://localhost:3000/data')
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data);
+//   });
 
   return (  
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={devComponent} />
         <Route path="/Home" className= 'Homepage' element={<HomePage />} />
       </Routes>
+      
 //=======
 //import React from 'react';
 //import './App.css';
