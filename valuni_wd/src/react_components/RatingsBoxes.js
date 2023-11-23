@@ -6,6 +6,13 @@ import './RatingsBoxes.css';
 class RatingsBoxesEL extends React.Component {
   render() {
     const { Text } = this.props;
+    const { ProfLast } = this.props;
+    const { ProfFirst } = this.props;
+    const { Sem } = this.props;
+    Text = "HellozHellozHellozHellozHellozHellozHellozHellozHellozHellozHelloz";
+    ProfLast = "Cena";
+    ProfFirst = "John";
+    Sem = "2X' 2X'";
     return (
       <div className='flex'>
         <div className='RatingsBox' id='RatingsBox'>
@@ -22,10 +29,10 @@ class RatingsBoxesEL extends React.Component {
             </div>
           </div>
           <h2 className='ProfDetails' id='ProfDetails'>
-            Prof. lastName, firstName
+            Prof. {ProfLast}, {ProfFirst}
           </h2>
           <h2 className='Semester' id='Semester'>
-            SEM 2X'2X
+            SEM {Sem}
           </h2>
           <div className='RatingText' id='RatingText'>{Text}</div>
         </div>
