@@ -6,11 +6,11 @@ class CourseBoxArray extends React.Component {
   render() {
     // Sample data for demonstration
     const courses = [
-      { title: 'CSCE 1000', lastName: 'Mikaelson' , firstName: 'Klaus' },
-      { title: 'CSCE 4000', lastName: 'Forbes', firstName: 'Caroline' },
-      { title: 'CSCE 5000', lastName: 'Gilbert', firstName: 'Elena' },
-      { title: 'CSCE 2000', lastName: 'Gilbert', firstName: 'Jeremy' },
-      { title: 'CSCE 3000', lastName: 'Saltzman', firstName: 'Alaric' },
+      { title: 'CSCE 231/2303', lastName: 'Salama' , firstName: 'Cherif' },
+      { title: 'CSCE 253/2501', lastName: 'Sharara', firstName: 'Hossam' },
+      { title: 'CSCE 330/3301', lastName: 'Salama', firstName: 'Cherif' },
+      { title: 'CSCE 341/3701 ', lastName: 'El Ghamrawy', firstName: 'Sally' },
+      { title: 'CSCE 490/4950 ', lastName: 'Sharara', firstName: 'Hossam' },
       { title: 'CSCE 2000', lastName: 'Salvatore', firstName: 'Damon' },
       { title: 'CSCE 1000', lastName: 'Fells', firstName: 'Merridith' },
       { title: 'CSCE 4000', lastName: 'Bennet', firstName: 'Bonnie' },

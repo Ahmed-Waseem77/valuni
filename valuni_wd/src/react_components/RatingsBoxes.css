@@ -1,0 +1,57 @@
+/* RatingsBoxes.css */
+@import url('../ConstColors.css');
+
+.RatingsBox {
+  border: 0.9em solid;
+  border-color: var(--light-1);
+  background-color: var(--light-1); 
+  border-radius: 1.5em; 
+  text-align: left;
+  width: 25rem; 
+  margin: 0; 
+  height: auto; 
+}
+
+.flex {
+  display: flex;
+  padding-left: 2em;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.RatingDetails {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+}
+
+.Rater {
+  font-size: 1.5em; 
+}
+
+.StarsContainer {
+  display: flex;
+  align-items: center; 
+  margin-left: 8em; 
+}
+
+.Stars {
+  width: 1.3em !important; 
+  height: 1.3em !important; 
+}
+
+.Semester,
+.ProfDetails{
+  margin: 0.4em 0 !important; 
+  font-size: 1em !important;
+  color: var(--dark-4) !important;
+}
+
+.RatingText {
+  word-wrap: break-word; 
+  font-size: 0.9em; 
+  color: var(--dark-2);
+  margin: 1.2em 0; 
+  font-weight: bold;
+}

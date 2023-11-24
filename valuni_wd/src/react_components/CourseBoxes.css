@@ -1,6 +1,8 @@
 /* CourseBoxes.css */
 @import url('../ConstColors.css');
 
+
+
 .CourseBox {
   border: 0.9em solid;
   border-color: var(--light-1);
@@ -11,13 +13,14 @@
   height:10em;
   margin: 0; /* No margin at the beginning of the box */
 }
+
 .flex{
   display: flex;
+  padding-left: 2em;
   width: 100%;
   height: 100%; 
   align-items: center;
   justify-content: center;
-  margin-right: 2em;
   
 
 }
