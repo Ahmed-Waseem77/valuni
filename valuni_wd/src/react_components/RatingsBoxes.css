@@ -7,14 +7,14 @@
   background-color: var(--light-1); 
   border-radius: 1.5em; 
   text-align: left;
-  width: 25rem; 
-  margin: 0; 
+  width: 30vw; 
+  margin-bottom: 1.1em; 
   height: auto; 
+  
 }
 
-.flex {
+.flexRatings {
   display: flex;
-  padding-left: 2em;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -28,12 +28,13 @@
 
 .Rater {
   font-size: 1.5em; 
+  color: var(--dark-4)
 }
 
 .StarsContainer {
   display: flex;
   align-items: center; 
-  margin-left: 8em; 
+  margin-left: 6em; 
 }
 
 .Stars {

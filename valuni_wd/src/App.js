@@ -1,6 +1,6 @@
 
 import './App.css';  
-//import {devComponent} from './fdev.js';
+import {devComponent} from './fdev.js';
 
 //import testFirebase from './firebase/config.js';
 
