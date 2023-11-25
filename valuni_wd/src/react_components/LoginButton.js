@@ -1,22 +1,57 @@
+import React, { useState } from 'react';
 import './LoginButton.css';
-import {Homepage} from '../homepage/Homepage';
-import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPasswordFunction } from '../firebase/config';
 
+function LoginButtonEL(props) {
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
+  const handlePress = async () => {
+    const { email, password, onLoginButtonClick } = props;
 
+    try {
+      // Wait for the sign-in function to complete
+      const userExists = await signInWithEmailAndPasswordFunction(email, password);
 
-class LoginButtonEL extends React.Component{
-    render(){
-    return (
+      // If sign-in is successful, you can navigate to the next window
+      if (userExists) {
+        console.log('User signed in successfully. Navigating to the next window...');
+
+        // Use useNavigate to navigate to the next window with additional props
+        navigate('/Home'); // Adjust the path as needed
+
+        // Call the onLoginButtonClick function if provided
+        if (onLoginButtonClick) {
+          onLoginButtonClick();
+        }
+      } else {
+        console.log('User does not exist in the database.');
+        // Handle case where the user does not exist
+        setError('User does not exist in the database.');
+      }
+    } catch (error) {
+      console.error('Error signing in:', error.message);
+      // Handle the sign-in error if needed
+      setError(`Error signing in: ${error.message}`);
+    }
+  };
+
+  return (
     <div>
-      <button className = "btn" id = "btn" onClick={this.handlePress} onMouseOver={this.handleHover}>
-        <Link to="/Home" className='link'> login </Link>
+      {error && <div>{error}</div>}
+      <button className="btn" id="btn" onClick={handlePress} onMouseOver={props.handleHover}>
+        {/* Render the Link conditionally */}
+        {props.linkTo ? (
+          <Link to={props.linkTo} className="link">
+            Login
+          </Link>
+        ) : (
+          'Login'
+        )}
       </button>
     </div>
-    )
-  }
+  );
 }
 
-
-export {LoginButtonEL};
+export { LoginButtonEL };
