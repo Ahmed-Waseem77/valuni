@@ -38,8 +38,8 @@ function LoginButtonEL(props) {
   };
 
   return (
-    <div>
-      {error && <div>{error}</div>}
+    <div className="errAndBtn">
+      {error && <div className="err">{error}</div>}
       <button className="btn" id="btn" onClick={handlePress} onMouseOver={props.handleHover}>
         {/* Render the Link conditionally */}
         {props.linkTo ? (
