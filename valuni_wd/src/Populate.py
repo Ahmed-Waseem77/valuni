@@ -2,8 +2,8 @@ from sqlalchemy import create_engine
 import pandas as pd
 
 def Populate():
-    Names = ["Courses", "Instructors", "Teach"]
-    CSVs = ["csvs/Courses.csv", "csvs/Instructors.csv", "csvs/Teach.csv"]
+    Names = ["Courses", "Instructors", "Users", "Teach", "Take", "Review"]
+    CSVs = ["csvs/Courses.csv", "csvs/Instructors.csv", "csvs/Users.csv", "csvs/Teach.csv", "csvs/Take.csv", "csvs/Reviews.csv"]
     for i in range(len(CSVs)):
         df = pd.read_csv(CSVs[i], encoding="utf-8")
         df = df.where(pd.notna(df), None)
@@ -21,3 +21,4 @@ def Populate():
         engine.dispose()
 
 Populate()
+
