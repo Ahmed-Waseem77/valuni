@@ -11,7 +11,7 @@ import { HomePage } from './homepage/Homepage';
 
 function App() {
 
-fetch('http://localhost:3000/data')
+fetch('http://localhost:3005/data')
   .then(response => response.json())
   .then(data => {
     console.log(data);
