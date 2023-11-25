@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, collection } from 'firebase/firestore';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';  // Add this line
 
 
@@ -12,6 +12,7 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, se
 
 // AW: 2021-10-10:  Firebase configuration is removed from this file for security reasons.
 const firebaseConfig = {
+  apiKey: "AIzaSyChFnWRgOgVa55H2oa-kDclPwFvVw7mJns",
   authDomain: "val-uni.firebaseapp.com",
   databaseURL: "https://val-uni-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "val-uni",
@@ -23,6 +24,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
@@ -30,7 +32,7 @@ const auth = getAuth(app);
 export function testFirebase() {
   console.log(process.env);
   if (app) {
-    console.log(process.env);
+    console.log(process.env.REACT_APP_FIREBASE_API_KEY);
     console.log('Firebase is initialized successfully');
 
     // Test database connectivity
@@ -53,18 +55,30 @@ export function testFirebase() {
   }
 }
 
-// Function to sign in user with email and password
 export function signInWithEmailAndPasswordFunction(email, password) {
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
+  return new Promise(async (resolve, reject) => {
+    try {
+      const auth = getAuth(); // Get the authentication instance
+
+      // Sign in with email and password
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      console.log('User signed in:', user.uid);
-    })
-    .catch((error) => {
+
+      // Check if the user is authenticated
+      if (user && user.uid) {
+        // User is authenticated
+        resolve(true);
+      } else {
+        // User is not authenticated
+        resolve(false);
+      }
+    } catch (error) {
       console.error('Error signing in:', error.message);
-    });
+      reject(error); // Reject the promise in case of an error
+    }
+  });
 }
+
 
 // Function to sign up user with email and password
 export async function signUpWithEmailAndPassword(email, password) {
