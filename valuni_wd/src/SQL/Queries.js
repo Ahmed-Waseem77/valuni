@@ -9,11 +9,13 @@ const app = express();
 
 var con = mysql.createConnection
 ({
-            host: "localhost",
-            user: "weso",
-            password: "ahmed_2003",
-            database: "valuni"
-});
+  host: "zrp.h.filess.io",
+  user: "valuni_ropethird",
+  password: "050941bdad080ca74329ca3543b680010525525b",
+  database: "valuni_ropethird"
+}); 
+
+
 var sql =
     "SELECT C.CRN, C.Rating, I.First_Name, I.Last_Name " +
     "FROM Teach T " +

@@ -1,6 +1,6 @@
 
 import './App.css';  
-import {devComponent} from './fdev.js';
+//import {devComponent} from './fdev.js';
 
 //import testFirebase from './firebase/config.js';
 
@@ -11,7 +11,7 @@ import { HomePage } from './homepage/Homepage';
 
 function App() {
 
-fetch('http://localhost:3000/data')
+fetch('mysql://valuni_ropethird:050941bdad080ca74329ca3543b680010525525b@zrp.h.filess.io:3305/valuni_ropethird')
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -22,32 +22,6 @@ fetch('http://localhost:3000/data')
         <Route path="/" element={<LoginPage />} />
         <Route path="/Home" className= 'Homepage' element={<HomePage />} />
       </Routes>
-//=======
-//import React from 'react';
-//import './App.css';
-//import SignIn from './SignIn';
-//import SignUp from './SignUp';
-//import { testFirebase, signInWithEmailAndPasswordFunction, signUpWithEmailAndPassword } from './firebase/config';
-//
-//function App() {
-//  // Call the testFirebase function to test Firebase connectivity
-//  testFirebase();
-//
-//  const handleSignIn = (email, password) => {
-//    signInWithEmailAndPasswordFunction(email, password);
-//  };
-//
-//  const handleSignUp = (email, password) => {
-//    signUpWithEmailAndPassword(email, password);
-//  };
-//
-//  return (
-//    <div>
-//      <h1>Your App Title</h1>
-//      <SignIn onSignIn={handleSignIn} />
-//      <SignUp onSignUp={handleSignUp} />
-//    </div>
-//>>>>>>> refs/remotes/origin/dev-b
   );
 }
 
