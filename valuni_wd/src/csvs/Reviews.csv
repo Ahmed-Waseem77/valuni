@@ -1,4 +1,4 @@
-﻿User_Major,RText,User_Email,Semester,Inst_ID,CRN,Grading,TeachingStyle,Flexibility,Availability,Engaging,Support,ContentQuality,Difficulty,Workload
+User_Major,RText,User_Email,Semester,Inst_ID,CRN,Grading,TeachingStyle,Flexibility,Availability,Engaging,Support,ContentQuality,Difficulty,Workload
 Computer Science,Course is easy if you are familiar with coding.,mohamed.m@aucegypt.edu,Fall2022,NULL,CSCE106/1001,3.22,NULL,NULL,NULL,3.4,3.2,3.4,4.5,4
 Electronics Engineering,I found it difficult as computer science is not my major.,yasseryassin@aucegypt.edu,Fall2020,NULL,CSCE106/1001,2.1,NULL,NULL,NULL,2.2,4.2,4.4,3.3,4.5
 Computer Science,"I understood the content very well from her explanation, would recommend taking the course with her.",lina.y@aucegypt.edu,Fall2021,900145327,CSCE106/1001,1.2,3.2,4,3.5,NULL,NULL,NULL,NULL,NULL
