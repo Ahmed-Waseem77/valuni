@@ -3,8 +3,8 @@
     display: flex;
     overflow-x: auto;
     width: 100vw;
-    height: 25vh; 
-    margin-top: 3vh; 
+    height: 30vh; 
+    margin-top: 1vh; 
     
   }
   .container::-webkit-scrollbar{

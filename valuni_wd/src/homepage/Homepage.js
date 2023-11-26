@@ -8,10 +8,10 @@ class HomePage extends React.Component{
     return (
     <div className='homepage-container'> 
       <TopBar/>  
-      <div className="homepage-title"> COURSES IN YOUR MAJOR  </div>
+      <div className="homepage-title"> <h5>COURSES IN YOUR MAJOR</h5>  </div>
       <Scroll/>  
       <div className="divider"> </div>
-      <div className="homepage-title"> COURSES YOU HAVE TAKEN  </div>
+      <div className="homepage-title"> <h5>COURSES YOU HAVE TAKEN</h5>  </div>
       <Scroll/> 
     </div>
     )
