@@ -3,17 +3,23 @@ const fs = require("fs");
 var mysql = require('mysql2');
 const express = require('express'); 
 const jsonfile = require('jsonfile');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const port = 3005;
 const app = express();
+app.use(cors());
 
+app.use(bodyParser.json());
 
 var con = mysql.createConnection
 ({
-            host: "localhost",
-            user: "weso",
-            password: "ahmed_2003",
-            database: "valuni"
-});
+  host: "zrp.h.filess.io",
+  user: "valuni_ropethird",
+  password: "050941bdad080ca74329ca3543b680010525525b",
+  database: "valuni_ropethird"
+}); 
+
+
 var sql =
     "SELECT C.CRN, C.Rating, I.First_Name, I.Last_Name " +
     "FROM Teach T " +
@@ -58,5 +64,21 @@ con.connect(function(err)
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 }); 
+// API: get course
+// Method: GET
+app.get("/getCourse", function (req, res) {
+  var q = url.parse(req.url, true).query;
+  const crn = q.crn; // Use crn instead of username
 
+  var sql = "SELECT * FROM Courses WHERE CRN = ?";
 
+  connection.query(sql, crn, function (err, result) {
+    if (err) {
+      res.send("0");
+      throw err;
+    }
+
+    console.log("Course fetched");
+    res.send(result);
+  });
+});

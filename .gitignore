@@ -9,9 +9,9 @@
 *.synctex.gz  
 
 .DS_Store
-
 .env 
-.DS_Store
+.expo/
+.idea/
 
 # Any cache files and fdev.js front end dev file
 
