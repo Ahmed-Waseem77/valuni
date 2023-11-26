@@ -65,8 +65,6 @@ con.connect(function(err)
             console.log('Data written successfully');
           }
         });
-
-        con.end();
     });
 }); 
 
@@ -83,6 +81,30 @@ app.get("/getCourse", function (req, res) {
   var sql = "SELECT * FROM Courses WHERE CRN = ?";
 
   connection.query(sql, crn, function (err, result) {
+    if (err) {
+      res.send("0");
+      throw err;
+    }
+
+    console.log("Course fetched");
+    res.send(result);
+  });
+});
+// API: get course 
+// Method: GET
+//gets the first 10 courses in the database
+//does not take any parameters
+app.get("/getCourses", function (req, res) {
+  var sql =
+"SELECT C.CRN, C.Engaging, C.Support, C.ContentQuality, C.Difficulty, C.Grading, C.Workload, I.First_Name, I.Last_Name, I.Grading, I.TeachingStyle, I.Flexibility, I.Availability " + 
+"FROM Users U INNER JOIN Take T ON U.Email = T.User_Email " +
+"INNER JOIN Courses C ON T.CRN = C.CRN " +
+"INNER JOIN Teach Te ON C.CRN = Te.CRN " +
+"INNER JOIN Instructors I ON Te.Inst_ID = I.ID " + 
+"WHERE U.Major = C.Major AND U.Email = " + email +
+"LIMIT 5;";
+
+  con.query(sql, function (err, result) {
     if (err) {
       res.send("0");
       throw err;
