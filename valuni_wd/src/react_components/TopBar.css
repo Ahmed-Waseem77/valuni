@@ -1,110 +1,173 @@
-@import url('../ConstColors.css');
+/* TopBar.css */
+
+/* Apply blur effect to the body when dropdown is active */
+body.blur-background {
+  filter: blur(0px); /* Adjust the blur amount as needed */
+}
+
+/* Remove blur for the dropdown container and enable pointer events */
+body.blur-background .dropdown-container::before {
+  backdrop-filter: none;
+}
 
 
 .Topbar {
-    background-color: var( --dark-1); 
-    padding-top: 1.5vh; 
-    padding-bottom: 1.5vh; 
-    display: flex; 
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: var(--dark-2); 
-    height: 5vh;   
-    margin: auto;
-  }
-  
-
-  .SearchBar {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the content horizontally within SearchBar */
-    padding-top: 0.3vh;
-    padding-bottom: 0.3vh;
-    border: 1.5vh solid var(--dark-2); /* Change the border color as needed */
-    border: 0.58vh solid;
-    border-radius: 2vh; 
-    border-color: var(--dark-2);
-    background-color: var(--dark-2);
-    color: var(--dark-1); 
-    width: 40vw;
-    height: 3vh;
-  }
-  
-  /* Styles for the text input */
-  .TxtBar {
- 
-    width: 70vw;
-    height: 2.5vh; 
-
-    
-    justify-content: center;  
-    align-items: center;
-    
-    border: 0px solid;
-    border-color: rgba(0,0,0,0);
-    background-color: rgba(0,0,0,0);
-    
-    color: white; 
-    font-size: 0.9em;
-
-   
-} 
-
-.TxtBar:focus{
-    outline: none;
-}
-  
-  /* Add more styles or adjust existing styles as per your design */
-  
-  /* Optional: Add styles for the icon if you want to customize it */
-  .btnSearch{
-   
-    font-size: 2.3vh;
-    color: var(--dark-3); 
-    padding-right: 0.4vw; 
-    margin-top: 0.4vh; 
-
-    cursor: pointer;
-    border: 0em solid;
-    border-left: 0em;
-    border-radius: 0em; 
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: rgba(0,0,0,0);
-    border-color: rgba(0,0,0,0);
-} 
-  
-.App-logo { 
-    padding: 0.5vh; 
-    margin-right: 23vw;
-    height: 6vh;      
-    /* opacity: 10%; */
-    /* padding: 2rem;  */
-    
+  background-color: var(--dark-1);
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-2);
+  height: 5vh;
+  margin: auto;
 }
 
-.label{
-    font-size: 3vh;
-    font-weight: bold;
-    margin-left: 23vw;
-} 
+.SearchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.3vh;
+  padding-bottom: 0.3vh;
+  border: 1.5vh solid var(--dark-2);
+  border-radius: 2vh;
+  border-color: var(--dark-2);
+  background-color: var(--dark-2);
+  color: var(--dark-1);
+  width: 40vw;
+  height: 1.8vh;
+}
 
-.inside-corner { 
-background-color: rgba(0,0,0,0); 
-width: 100%;
-height: 5vh;
-border-radius: 5vw 5vw 0 0; 
-box-shadow: -1px -39px 0px 38px var(--dark-1);
--webkit-box-shadow: -1px -39px 0px 38px var(--dark-1);
--moz-box-shadow: -1px -39px 0px 38px var(--dark-1);
+.TxtBar {
+  width: 70vw;
+  height: 2.5vh;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+}
 
-} 
+.TxtBar:focus {
+  outline: none;
+}
 
+.btnSearch {
+  font-size: 2.3vh;
+  color: var(--dark-3);
+  padding-right: 0.4vw;
+  margin-top: 0.4vh;
+  cursor: pointer;
+  border: 0em solid;
+  border-left: 0em;
+  border-radius: 0em;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.App-logo {
+  padding: 0.5vh;
+  margin-right: 23vw;
+  height: 6vh;
+}
+
+.label {
+  font-size: 3vh;
+  font-weight: bold;
+  margin-left: 23vw;
+}
+
+.inside-corner {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 5vh;
+  border-radius: 5vw 5vw 0 0;
+  box-shadow: -1px -39px 0px 38px var(--dark-1);
+  -webkit-box-shadow: -1px -39px 0px 38px var(--dark-1);
+  -moz-box-shadow: -1px -39px 0px 38px var(--dark-1);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .Topbar-container {
-  animation: fadeInTop ease-in-out 0.5s 1 normal forwards;   
+    animation: fadeInTop ease-in-out 0.5s 1 normal forwards;
   }
 }
 
+
+.dropdown-container {
+  position: relative;
+  z-index: 2; 
+}
+
+.dropdown-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  pointer-events: none;
+  z-index: 1; 
+}
+
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 1.2vw;
+  left: 0;
+  transform: translateY(3vw); 
+  width: 40vw;
+  background-color: var(--light-2);
+  border-radius: 0.8em; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 3; 
+  padding-bottom: 1em;
+}
+
+
+.dropdown-item {
+  position: relative;
+  padding: 0.3em 0.1em !important;
+  color: #333;
+  font-size: 1.4svw;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 10px; 
+  border-bottom: 1px solid lightgray;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  box-sizing: border-box; 
+}
+
+.StarsContainer {
+  display: flex;
+}
+
+.Stars {
+  width: 1em !important; 
+  height: 1em !important; 
+}
+
+.suggestion-content {
+  padding: 10px; 
+  display: flex;
+  flex-direction: row;
+}
+
+.suggestion-content span {
+  margin-right: 10px;
+}
+
+.StarsContainer {
+  padding-left: 14em;
+}
