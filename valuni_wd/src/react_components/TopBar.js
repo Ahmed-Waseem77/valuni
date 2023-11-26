@@ -14,7 +14,7 @@ class TopBar extends React.Component{
     
     handleButtonClick = () => {
         console.log('Button clicked!');
-        // Add any additional logic you want to perform when the button is clicked
+        blur();
     };
     render(){
         return(

@@ -2,7 +2,13 @@ import React from 'react';
 import { CourseBoxes } from './CourseBoxes'; // Assuming CourseBoxes is the component you've defined
 import './CourseBoxesArray.css'
 
-class CourseBoxArray extends React.Component {
+export function getTitle(index) 
+{
+
+};
+
+class CourseBoxArray extends React.Component 
+{
   render() {
     // Sample data for demonstration
     const courses = [
@@ -12,7 +18,7 @@ class CourseBoxArray extends React.Component {
       { title: 'CSCE 341/3701 ', lastName: 'El Ghamrawy', firstName: 'Sally' },
       { title: 'CSCE 490/4950 ', lastName: 'Sharara', firstName: 'Hossam' },
       { title: 'CSCE 2000', lastName: 'Salvatore', firstName: 'Damon' },
-      { title: 'CSCE 1000', lastName: 'Fells', firstName: 'Merridith' },
+      { title: 'CSCE 1000', lastName: 'Waseem', firstName: 'Ahmed' },
       { title: 'CSCE 4000', lastName: 'Bennet', firstName: 'Bonnie' },
       { title: 'CSCE 5000', lastName: 'Petrova', firstName: 'Katerina' },
 
