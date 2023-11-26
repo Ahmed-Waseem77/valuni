@@ -15,6 +15,26 @@ class TopBar extends Component {
     };
   }
 
+  componentDidMount() {
+    // Add event listener to close dropdown on outside click
+    document.addEventListener('click', this.handleOutsideClick);
+  }
+
+  componentWillUnmount() {
+    // Remove event listener when component unmounts
+    document.removeEventListener('click', this.handleOutsideClick);
+  }
+
+  handleOutsideClick = (event) => {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (dropdownMenu && !dropdownMenu.contains(event.target)) {
+      // Click occurred outside the dropdown menu, close it
+      this.setState({
+        suggestions: [],
+      });
+    }
+  };
+
   handleInputChange = (event) => {
     const inputValue = event.target.value;
     const suggestions = this.generateSuggestions(inputValue);
@@ -50,7 +70,7 @@ class TopBar extends Component {
           <div className="suggestion-inner">
             {suggestion}
             <div className="StarsContainer">
-            {this.generateStars()}
+              {this.generateStars()}
             </div>
           </div>
         </div>
