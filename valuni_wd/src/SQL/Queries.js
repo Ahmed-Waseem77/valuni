@@ -95,19 +95,28 @@ app.get("/getCourse", function (req, res) {
 //gets the first 10 courses in the database
 //does not take any parameters
 app.get("/getCourses", function (req, res) {
-  var sql =
-"SELECT C.CRN, C.Engaging, C.Support, C.ContentQuality, C.Difficulty, C.Grading, C.Workload, I.First_Name, I.Last_Name, I.Grading, I.TeachingStyle, I.Flexibility, I.Availability " + 
-"FROM Users U INNER JOIN Take T ON U.Email = T.User_Email " +
-"INNER JOIN Courses C ON T.CRN = C.CRN " +
-"INNER JOIN Teach Te ON C.CRN = Te.CRN " +
-"INNER JOIN Instructors I ON Te.Inst_ID = I.ID " + 
-"WHERE U.Major = C.Major AND U.Email = " + email +
-"LIMIT 5;";
+  // Get the email from the request parameters
+  const email = req.query.email;
 
-  con.query(sql, function (err, result) {
+  // Check if email is provided
+  if (!email) {
+    return res.status(400).send("Email is required");
+  }
+
+  var sql =
+    "SELECT C.CRN, C.Engaging, C.Support, C.ContentQuality, C.Difficulty, C.Grading, C.Workload, I.First_Name, I.Last_Name, I.Grading, I.TeachingStyle, I.Flexibility, I.Availability " +
+    "FROM Users U INNER JOIN Take T ON U.Email = T.User_Email " +
+    "INNER JOIN Courses C ON T.CRN = C.CRN " +
+    "INNER JOIN Teach Te ON C.CRN = Te.CRN " +
+    "INNER JOIN Instructors I ON Te.Inst_ID = I.ID " +
+    "WHERE U.Major = C.Major AND U.Email = ? " +  // Use a placeholder for email
+    "LIMIT 5;";
+
+  // Use prepared statement to avoid SQL injection
+  con.query(sql, [email], function (err, result) {
     if (err) {
-      res.send("0");
-      throw err;
+      console.error(err);
+      return res.status(500).send("Internal Server Error");
     }
 
     console.log("Course fetched");
