@@ -11,7 +11,7 @@ import { HomePage } from './homepage/Homepage';
 
 function App() {
 
-fetch('mysql://valuni_ropethird:050941bdad080ca74329ca3543b680010525525b@zrp.h.filess.io:3305/valuni_ropethird')
+fetch('http://localhost:3005/data')
   .then(response => response.json())
   .then(data => {
     console.log(data);

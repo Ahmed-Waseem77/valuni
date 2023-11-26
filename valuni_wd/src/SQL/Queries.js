@@ -7,23 +7,33 @@ const port = 3005;
 const app = express();
 
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:19006');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+
 var con = mysql.createConnection
 ({
   host: "zrp.h.filess.io",
   user: "valuni_ropethird",
   password: "050941bdad080ca74329ca3543b680010525525b",
-  database: "valuni_ropethird"
+  database: "valuni_ropethird", 
+  port: 3305
 }); 
 
 
+var email = "\"sarah.yassin@aucegypt.edu\" " ;
+
 var sql =
-    "SELECT C.CRN, C.Rating, I.First_Name, I.Last_Name " +
-    "FROM Teach T " +
-    "INNER JOIN Courses C ON T.CRN = C.CRN " +
-    "INNER JOIN Instructors I ON T.Inst_ID = I.ID " +
-    "WHERE I.First_Name IN ('Sally', 'Cherif', 'Hossam') " +
-    "GROUP BY 1, 2, 3, 4 " +
-    "LIMIT 5;";
+"SELECT C.CRN, C.Engaging, C.Support, C.ContentQuality, C.Difficulty, C.Grading, C.Workload, I.First_Name, I.Last_Name, I.Grading, I.TeachingStyle, I.Flexibility, I.Availability " + 
+"FROM Users U INNER JOIN Take T ON U.Email = T.User_Email " +
+"INNER JOIN Courses C ON T.CRN = C.CRN " +
+"INNER JOIN Teach Te ON C.CRN = Te.CRN " +
+"INNER JOIN Instructors I ON Te.Inst_ID = I.ID " + 
+"WHERE U.Major = C.Major AND U.Email = " + email +
+"LIMIT 5;";
 
 con.connect(function(err)
 {
