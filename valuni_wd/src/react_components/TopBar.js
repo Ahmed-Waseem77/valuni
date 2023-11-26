@@ -71,7 +71,6 @@ class TopBar extends Component {
     document.body.classList.toggle('blur-background', isDropdownActive);
 
     return (
-        <div className={`Topbar-container ${isDropdownActive ? 'blur-background' : ''}`}>
       <div className="Topbar-container">
         <div className="Topbar" id="Topbar">
           <object type="image/svg+xml" data={logo} className="App-logo" alt="logo"></object>
@@ -99,7 +98,6 @@ class TopBar extends Component {
           <div className="label">AUC</div>
         </div>
         <div className="inside-corner"> </div>
-      </div>
       </div>
     );
   }

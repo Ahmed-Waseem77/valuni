@@ -1,5 +1,5 @@
 /* TopBar.css */
-
+@import "../ConstColors.css";
 
 .Topbar {
   background-color: var(--dark-1);
@@ -18,7 +18,7 @@
 
 .Topbar-container {
   position: relative;
-  z-index: 1000; /* Adjust if necessary */
+  z-index: 1000; 
 }
 
 .blur-background::before {
@@ -28,9 +28,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
-  z-index: 999; /* Adjust to be below .dropdown-menu */
-  pointer-events: none; /* Allow interactions with elements beneath the overlay */
+  backdrop-filter: blur(5px); 
+  z-index: 999; 
+  pointer-events: none; 
 }
 
 .SearchBar {
@@ -135,6 +135,10 @@
   box-sizing: border-box; 
   width: 100%;
   padding: 0.4em;
+}
+
+.dropdown-item:hover {
+  color: var(--acc-blue-light); 
 }
 
 .StarsContainer {
