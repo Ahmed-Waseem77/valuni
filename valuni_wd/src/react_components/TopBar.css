@@ -1,6 +1,5 @@
 /* TopBar.css */
 
-/* Apply blur effect to the body when dropdown is active */
 
 .Topbar {
   background-color: var(--dark-1);
@@ -13,8 +12,25 @@
   color: var(--dark-2);
   height: 5vh;
   margin: auto;
-  position: relative; /* Add position relative */
-  z-index: 1000; /* Set a high z-index value */
+  position: relative;
+  z-index: 1000;
+}
+
+.Topbar-container {
+  position: relative;
+  z-index: 1000; /* Adjust if necessary */
+}
+
+.blur-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+  z-index: 999; /* Adjust to be below .dropdown-menu */
+  pointer-events: none; /* Allow interactions with elements beneath the overlay */
 }
 
 .SearchBar {
@@ -30,7 +46,7 @@
   background-color: var(--dark-2);
   color: var(--dark-1);
   width: 40vw;
-  height: 1.8vh;
+  height: 1.5vh;
 }
 
 .TxtBar {
@@ -104,7 +120,8 @@
   border-radius: 0.8em; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding-bottom: 1em;
-  z-index: 2000;
+  z-index: 20000;
+  
 }
 
 .dropdown-item {
@@ -113,13 +130,16 @@
   font-size: 1.4svw;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px solid lightgray;
-  display: grid; 
+  border-bottom: 2px solid lightgray;
+  display: block; 
   box-sizing: border-box; 
+  width: 100%;
+  padding: 0.4em;
 }
 
 .StarsContainer {
-    padding-left: 8ev;
+    padding-left: 13.6em;
+    display: inline-block;
 
 }
 
@@ -129,10 +149,10 @@
 }
 
 .suggestion-content {
-  padding-left: 2ev;
-
+  padding-left: 1.5em;
+  display: inline-block;
 }
 
-.suggetstion-inner{
-  margin-left: auto !important;
+.suggestion-inner{
+  
 }

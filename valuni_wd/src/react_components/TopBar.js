@@ -32,7 +32,7 @@ class TopBar extends Component {
   };
 
   generateSuggestions = (inputValue) => {
-    const predefinedSuggestions = ['CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX'];
+    const predefinedSuggestions = ['CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX'];
 
     if (inputValue.trim() === '') {
       // If the input is empty, clear suggestions
@@ -47,9 +47,11 @@ class TopBar extends Component {
     return filteredSuggestions.map((suggestion, index) => (
       <Link key={index} to={`/page/${suggestion.toLowerCase()}`} className="dropdown-item">
         <div className="suggestion-content">
-          <div className="suggestion-content">
+          <div className="suggestion-inner">
             {suggestion}
+            <div className="StarsContainer">
             {this.generateStars()}
+            </div>
           </div>
         </div>
       </Link>
@@ -69,6 +71,7 @@ class TopBar extends Component {
     document.body.classList.toggle('blur-background', isDropdownActive);
 
     return (
+        <div className={`Topbar-container ${isDropdownActive ? 'blur-background' : ''}`}>
       <div className="Topbar-container">
         <div className="Topbar" id="Topbar">
           <object type="image/svg+xml" data={logo} className="App-logo" alt="logo"></object>
@@ -96,6 +99,7 @@ class TopBar extends Component {
           <div className="label">AUC</div>
         </div>
         <div className="inside-corner"> </div>
+      </div>
       </div>
     );
   }
