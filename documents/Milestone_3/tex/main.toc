@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Project Proposal}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Usage}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Risks}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Community Risks}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Development Risks}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Motivation}{2}{}%
+\contentsline {subsection}{\numberline {1.4}MVP Requirements (Requirements to be Implemented)}{3}{}%
+\contentsline {section}{\numberline {2}Requirements Specifications}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Product Backlog}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Functional Requirements}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Non Functional Requirements}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Use Case Diagram}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Use Case Narratives}{4}{}%
+\contentsline {section}{\numberline {3}Design Specifications}{9}{}%
+\contentsline {subsection}{\numberline {3.1}High Level Architecture}{9}{}%
+\contentsline {subsection}{\numberline {3.2}Detailed Level Architecture: Monolithic Layered Architecture}{9}{}%
+\contentsline {subsection}{\numberline {3.3}Activity Diagrams}{9}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Writing Reviews}{10}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Reading Reviews}{10}{}%
+\contentsline {subsection}{\numberline {3.4}MVC: Model View Controller Model}{11}{}%
+\contentsline {subsection}{\numberline {3.5}Class Diagram}{12}{}%
+\contentsline {subsection}{\numberline {3.6}Sequence Diagram}{13}{}%
+\contentsline {subsection}{\numberline {3.7}State Diagram}{13}{}%
+\contentsline {subsection}{\numberline {3.8}Entity Relationship Diagram}{14}{}%
+\contentsline {section}{\numberline {4}Second Sprint Retrospective}{15}{}%
+\contentsline {subsection}{\numberline {4.1}Sprint log}{15}{}%
+\contentsline {subsection}{\numberline {4.2}SCRUM team organization}{15}{}%
+\contentsline {subsection}{\numberline {4.3}Pair Programming}{15}{}%
+\contentsline {subsection}{\numberline {4.4}Sprint Review}{16}{}%
