@@ -47,10 +47,10 @@ class TopBar extends Component {
     return filteredSuggestions.map((suggestion, index) => (
       <Link key={index} to={`/page/${suggestion.toLowerCase()}`} className="dropdown-item">
         <div className="suggestion-content">
-          <span>
+          <div className="suggestion-content">
             {suggestion}
             {this.generateStars()}
-          </span>
+          </div>
         </div>
       </Link>
     ));

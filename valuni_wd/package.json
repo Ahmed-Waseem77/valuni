@@ -22,7 +22,7 @@
     "jsonfile": "^6.1.0",
     "metro": "^0.80.0",
     "mime": "^3.0.0",
-    "mysql2": "^3.6.3",
+    "mysql2": "^3.6.5",
     "net": "^1.0.2",
     "process": "^0.11.10",
     "react-bootstrap": "^2.9.1",
@@ -67,9 +67,5 @@
   },
   "devDependencies": {
     "metro-config": "^0.80.0"
-  },
-  "browser": {
-    "crypto": false,
-    "stream": false
   }
 }
