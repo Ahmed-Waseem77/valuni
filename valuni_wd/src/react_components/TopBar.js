@@ -69,7 +69,7 @@ class TopBar extends Component {
         <div className="suggestion-content">
           <div className="suggestion-inner">
             {suggestion}
-            <div className="StarsContainer">
+            <div className="StarsContainer11">
               {this.generateStars()}
             </div>
           </div>
