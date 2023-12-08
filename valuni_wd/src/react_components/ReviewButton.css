@@ -1,6 +1,7 @@
 @import "../ConstColors.css";
 
 .btnRev{
+
     background-color: var(--dark-2); 
     color: var(--light-1); 
     padding: 0.4em 1.35vw; 
@@ -14,6 +15,10 @@
     transition: background-color 0.3s ease; 
     transition: box-shadow 0.3s ease; 
     }
+.btnRev :-webkit-any(:any-link){
+    text-decoration: none;
+    color: var(--light-1); 
+}
 
 .btnRev:active{
     background-color: var(--acc-blue-light); 

@@ -14,12 +14,14 @@
   margin: auto;
   position: relative;
   z-index: 1000;
+  justify-content: space-evenly;
 }
 
 .Topbar-container {
   position: relative;
   z-index: 1000; 
   z-index: 1000; 
+
 }
 
 .blur-background::before {
@@ -94,7 +96,7 @@
 .label {
   font-size: 3vh;
   font-weight: bold;
-  margin-left: 23vw;
+  margin-left: 16vw;
 }
 
 .inside-corner {
@@ -160,4 +162,22 @@
 .suggestion-content {
   padding-left: 1.5em;
   display: inline-block;
+}
+.themebtn button
+{
+  background-color:rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: var(--acc-orange);
+  font-size:xx-large;
+  rotate: 180;
+  border: none;
+
+}
+.themebtn button :active
+{
+   
+  color: var(--acc-blue-light);
+  rotate: 0;
+  font-size:xx-large;
+  
 }

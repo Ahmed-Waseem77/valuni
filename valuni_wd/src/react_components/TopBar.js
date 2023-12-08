@@ -1,6 +1,6 @@
 // TopBar.js
 import React, { Component } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch, FaToggleOn } from 'react-icons/fa';
 import logo from '../resources/VAL-STARS-LOGO-LIGHT.svg';
 import { Link } from 'react-router-dom';
 import './TopBar.css';
@@ -83,6 +83,9 @@ class TopBar extends Component {
     // Add any additional logic you want to perform when the button is clicked
   };
 
+  darktheme = () => {
+    
+  }
   render() {
     const { inputValue, suggestions } = this.state;
 
@@ -116,6 +119,8 @@ class TopBar extends Component {
             )}
           </div>
           <div className="label">AUC</div>
+
+          <div className="themebtn"><button onClick={this.darktheme}><FaToggleOn/></button></div>
         </div>
         <div className="inside-corner"> </div>
       </div>

@@ -9,9 +9,11 @@ class ReviewButtonEl extends React.Component{
     render(){
     return (
     <div>
+      <Link to="/ReviewForm" className='ReviewForm'>
       <button className = "btnRev" id = "btnRev" onClick={this.handlePress} onMouseOver={this.handleHover}>
-      <Link to="" className='link'> Review </Link>
+       Review 
       </button>
+      </Link>
     </div>
     )
   }
