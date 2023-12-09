@@ -19,7 +19,7 @@ function LoginButtonEL(props) {
         console.log('User signed in successfully. Navigating to the next window...');
 
         // Use useNavigate to navigate to the next window with additional props
-        navigate('/Home'); // Adjust the path as needed
+        navigate('/Home', { state: { email } }); // Adjust the path as needed
 
         // Call the onLoginButtonClick function if provided
         if (onLoginButtonClick) {

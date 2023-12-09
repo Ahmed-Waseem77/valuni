@@ -1,0 +1,72 @@
+[
+  {
+    "CRN": "CSCE000/2211",
+    "Engaging": "3.3",
+    "Support": "4.7",
+    "ContentQuality": "4.5",
+    "Difficulty": "1.2",
+    "Grading": "4.3",
+    "Workload": "4.3",
+    "First_Name": "Amr",
+    "Last_Name": "Goneid",
+    "TeachingStyle": "4.1",
+    "Flexibility": "2.1",
+    "Availability": "3.2"
+  },
+  {
+    "CRN": "CSCE106/1001",
+    "Engaging": "3.2",
+    "Support": "4.1",
+    "ContentQuality": "4.2",
+    "Difficulty": "2.3",
+    "Grading": "4.8",
+    "Workload": "3.0",
+    "First_Name": "Nouri",
+    "Last_Name": "Sakr",
+    "TeachingStyle": "4.2",
+    "Flexibility": "3.4",
+    "Availability": "4.5"
+  },
+  {
+    "CRN": "CSCE106/1001",
+    "Engaging": "3.2",
+    "Support": "4.1",
+    "ContentQuality": "4.2",
+    "Difficulty": "2.3",
+    "Grading": "3.3",
+    "Workload": "3.0",
+    "First_Name": "Howaida",
+    "Last_Name": "Ismail",
+    "TeachingStyle": "4.3",
+    "Flexibility": "2.1",
+    "Availability": "4.7"
+  },
+  {
+    "CRN": "CSCE106/1001",
+    "Engaging": "3.2",
+    "Support": "4.1",
+    "ContentQuality": "4.2",
+    "Difficulty": "2.3",
+    "Grading": "3.2",
+    "Workload": "3.0",
+    "First_Name": "Alia",
+    "Last_Name": "ElBolock",
+    "TeachingStyle": "2.3",
+    "Flexibility": "4.4",
+    "Availability": "3.7"
+  },
+  {
+    "CRN": "CSCE106/1001",
+    "Engaging": "3.2",
+    "Support": "4.1",
+    "ContentQuality": "4.2",
+    "Difficulty": "2.3",
+    "Grading": "2.1",
+    "Workload": "3.0",
+    "First_Name": "Mikhail",
+    "Last_Name": "Mikhail",
+    "TeachingStyle": "3.3",
+    "Flexibility": "3.2",
+    "Availability": "3.6"
+  }
+]

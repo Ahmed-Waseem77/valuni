@@ -13,3 +13,32 @@ body {
   min-width: 100vw;
 }
 
+
+::-webkit-scrollbar {
+  width: 1em;            
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  transition: 0.2s;   
+  background: var(--acc-blue-dark);          
+  border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--acc-blue-light);          
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;       
+} 
+
+/* This will affect the scrollbar globally in Firefox */
+html {
+  scrollbar-width: thin;          
+  scrollbar-color: var(--light-2) transparent;  /* scroll thumb and track */
+
+}

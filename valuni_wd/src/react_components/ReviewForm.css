@@ -13,9 +13,7 @@
   z-index: 998;
   position: fixed;
   top: 20%;
-  left: 15%;
-
-  
+  left: 8%;
 
 }
 
@@ -23,6 +21,7 @@
   display: fixed;
 
 }
+
 
 .column1 {
   flex: 1;
@@ -78,12 +77,45 @@
 
 .StarsContainerRF {
   display: flex;
+  justify-content: space-evenly;
 }
 
-.StarsRF {
+.StarsRF
+{
+  border: none;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius:0 !important;
+  /* background-image: url('../resources/VAL-STAR_EMPTY.svg'); */
+  cursor: pointer;
+  background-size: cover; 
+  padding: 1.2em;
+  margin-right: 0.2em;
   width: 1.8em;
   height: 1.8em;
 }
+/* #btn1:hover
+{
+  background-image: url('../resources/VAL-STAR_FULL.svg')!important;
+}
+#btn2:hover 
+{
+  background-image: url('../resources/VAL-STAR_FULL.svg')!important; 
+}
+#btn3:hover 
+{
+  background-image: url('../resources/VAL-STAR_FULL.svg')!important; 
+}
+#btn4:hover 
+{
+  background-image: url('../resources/VAL-STAR_FULL.svg')!important; 
+}
+#btn5:hover 
+{
+  background-image: url('../resources/VAL-STAR_FULL.svg')!important; 
+} */
+
+
 
 .BlueStarsRF {
   width: 1.4em !important;
