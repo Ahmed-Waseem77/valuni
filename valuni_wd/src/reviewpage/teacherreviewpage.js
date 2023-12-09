@@ -1,9 +1,9 @@
 import React, {Component} from 'react';  
-import './coursereviewpage.css'
-import {TopBar} from '../react_components/TopBar' 
-import {ReviewBoxesScroll} from '../react_components/ReviewScroll'
+import './coursereviewpage.css';
+import {TopBar} from '../react_components/TopBar' ;
+import {ReviewBoxesScroll} from '../react_components/ReviewScroll';
 import Ratings from '../resources/VAL-STAR_FULL.svg';
-import {ReviewButtonEl} from '../react_components/ReviewButton'
+import {ReviewButtonEl} from '../react_components/ReviewButton';
 import Ratings1 from '../resources/VAL-STAR-BLUE.svg';
 
 

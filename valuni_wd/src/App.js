@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 import { HomePage } from './homepage/Homepage'; 
 import { CourseReviewPage } from './reviewpage/coursereviewpage.js'; 
 import { TeacherReviewPage } from './reviewpage/teacherreviewpage.js'; 
-import {ReviewFormEl} from './react_components/ReviewForm.js'
+import {ReviewFormEl} from './react_components/ReviewForm.js';
 function App() {
 
 fetch('http://localhost:3005/data')
