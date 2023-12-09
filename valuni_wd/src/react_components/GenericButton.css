@@ -1,9 +1,6 @@
 @import "../ConstColors.css";
 
-.btnRev{
-
-    background-color: var(--dark-2); 
-    color: var(--light-1); 
+.Genbtn{
     padding: 0.4em 1.35vw; 
     border: none;
     border-radius: 1.3rem; 
@@ -15,27 +12,33 @@
     transition: background-color 0.3s ease; 
     transition: box-shadow 0.3s ease; 
     }
-.btnRev :-webkit-any(:any-link){
-    text-decoration: none;
-    color: var(--light-1); 
-}
 
-.btnRev:active{
+.Genbtn:active{
     background-color: var(--acc-blue-light); 
     box-shadow: none;
 }
 
-.btnRev:hover{
+.Genbtn:hover{
     background-color: var(--acc-orange); 
-    box-shadow: 0.05em 0.05em 0.18em 0 rgba(0, 0, 0, 0.8); 
+    box-shadow: 0.05em 0.05em 0.18em 0 rgba(0, 0, 0, 0.8);
+    color: var(--light-1);
 } 
 
-.link { 
+.linkbtn { 
   text-decoration: none;
-  color: var(--light-1); 
   width: 100%; 
   height: 100%;
   
 }
 
+.SubmitColor{
+    background-color: var(--dark-3);
+    color:  var(--light-1);
+  }
+  
+  
+.Cancel_Color{
+    background-color: var(--light-1);
+    color: var(--dark-3);
+  }
 

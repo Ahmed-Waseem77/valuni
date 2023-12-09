@@ -5,6 +5,7 @@
     width: 100vw;
     height: 30vh; 
     margin-top: 1vh; 
+    z-index: 0;
     
   }
   .container::-webkit-scrollbar{
