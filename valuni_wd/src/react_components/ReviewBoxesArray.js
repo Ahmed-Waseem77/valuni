@@ -9,8 +9,8 @@ class ReviewBoxesArray extends React.Component {
   render() {
     // Sample data for demonstration
     const list1 = [
-      { Text: 'YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!🙈', 
-      ProfLast: 'Cena' , ProfFirst: 'John' , Sem: 'Spring'},
+      // { Text: 'YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!YOU CANT SEE ME!🙈', 
+      // ProfLast: 'Cena' , ProfFirst: 'John' , Sem: 'Spring'},
       { Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac ullamcorper ipsum. Etiam gravida malesuada augue sit amet vulputate. Praesent eget mi purus. Proin sed consequat odio. Nullam a iaculis elit, at laoreet leo. In non justo convallis augue tempus gravida vitae in tellus. Cras auctor commodo ante sed lobortis. Duis vitae lacus odio.', 
       ProfLast: 'Salama' , ProfFirst: 'Cherif' , Sem: 'Spring'},      { title: 'CSCE 330/3301', lastName: 'Salama', firstName: 'Cherif' },
       { Text: 'CSCE 341/3701 ', ProfLast: 'El Ghamrawy', ProfFirst: 'Sally', Sem:'Fall' },
@@ -18,6 +18,9 @@ class ReviewBoxesArray extends React.Component {
       { Text: 'CSCE 341/3701 ', ProfLast: 'Sharara', ProfFirst: 'Hossam', Sem:'Fall' },
       { Text: 'CSCE 341/3701 ', ProfLast: 'Sharara', ProfFirst: 'Hossam', Sem:'Fall' },
       { Text: 'CSCE 341/3701 ', ProfLast: 'Sharara', ProfFirst: 'Hossam', Sem:'Fall' },
+      { Text: 'CSCE 341/3701 ', ProfLast: 'Sharara', ProfFirst: 'Hossam', Sem:'Fall' },
+      { Text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit.', ProfLast: 'Sally', ProfFirst: 'Elghamrawy', Sem:'Fall' },
+      
 
       // Add more courses as needed
     ];

@@ -113,6 +113,9 @@ function CourseReviewPage() {
           <ReviewBoxesScroll reviewData={reviewData} />
         </div>
       </div>
+      {reviewButtonClicked && (
+          <ReviewFormEl onClose={() => this.setState({ reviewButtonClicked: false })} onReviewSubmit={this.handleReviewSubmit}/>
+        )}
     </div>
   );
 };

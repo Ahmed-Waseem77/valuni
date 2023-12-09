@@ -10,6 +10,7 @@
   width: 25vw; /* Set a fixed width for the box */
   height: 20vh;
   margin: 0; /* No margin at the beginning of the box */
+  z-index: 0;
 }
 
 .flex {

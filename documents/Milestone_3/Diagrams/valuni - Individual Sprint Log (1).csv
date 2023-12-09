@@ -1,0 +1,38 @@
+Title,URL,Assignees,Status
+create project template,https://github.com/Ahmed-Waseem77/valuni/issues/1,"Ahmed-Waseem77, elbarbary, Hussein-Heggi, nouryasser1, SamanodyJr",Done
+Dark Mode initial design,https://github.com/Ahmed-Waseem77/valuni/issues/9,"Ahmed-Waseem77, SamanodyJr",Done
+Integrating authentication to the frontend,https://github.com/Ahmed-Waseem77/valuni/issues/12,"Ahmed-Waseem77, elbarbary, mego74",Done
+login email and password prompts,https://github.com/Ahmed-Waseem77/valuni/issues/16,SamanodyJr,Done
+Login page,https://github.com/Ahmed-Waseem77/valuni/issues/10,"Ahmed-Waseem77, SamanodyJr, youssef-S-Elmahdy",Done
+Setup for a functional user authentication (Firebase),https://github.com/Ahmed-Waseem77/valuni/issues/11,"elbarbary, mego74",Done
+Light Mode initial design,https://github.com/Ahmed-Waseem77/valuni/issues/6,"Ahmed-Waseem77, SamanodyJr",Done
+Brand Manual,https://github.com/Ahmed-Waseem77/valuni/issues/5,"Ahmed-Waseem77, SamanodyJr",Done
+Homepage course list,https://github.com/Ahmed-Waseem77/valuni/issues/29,SamanodyJr,Done
+Homepage topbar,https://github.com/Ahmed-Waseem77/valuni/issues/28,youssef-S-Elmahdy,Done
+"login page background, splash screen",https://github.com/Ahmed-Waseem77/valuni/issues/20,Ahmed-Waseem77,Done
+login buttons,https://github.com/Ahmed-Waseem77/valuni/issues/17,youssef-S-Elmahdy,Done
+Masking firebase API keys,https://github.com/Ahmed-Waseem77/valuni/issues/25,"Ahmed-Waseem77, elbarbary, mego74",In Progress
+Valuni Presentation,https://github.com/Ahmed-Waseem77/valuni/issues/7,"nouryasser1, SamanodyJr",Done
+Search drop down menu,https://github.com/Ahmed-Waseem77/valuni/issues/37,"SamanodyJr, youssef-S-Elmahdy",In Progress
+Review box component,https://github.com/Ahmed-Waseem77/valuni/issues/41,youssef-S-Elmahdy,Done
+Review page button,https://github.com/Ahmed-Waseem77/valuni/issues/42,youssef-S-Elmahdy,Done
+Finishing DB SQL schema,https://github.com/Ahmed-Waseem77/valuni/issues/38,"Hussein-Heggi, nouryasser1",Done
+Finishing up NodeJS API,https://github.com/Ahmed-Waseem77/valuni/issues/40,"Ahmed-Waseem77, elbarbary, mego74",Done
+generating some mock up data,https://github.com/Ahmed-Waseem77/valuni/issues/39,"Hussein-Heggi, nouryasser1",Done
+Review Page,https://github.com/Ahmed-Waseem77/valuni/issues/36,"SamanodyJr, youssef-S-Elmahdy",Done
+Documentation Diagrams for various methodologies,https://github.com/Ahmed-Waseem77/valuni/issues/27,nouryasser1,Done
+Connect the application to the local server database,https://github.com/Ahmed-Waseem77/valuni/issues/4,"Hussein-Heggi, nouryasser1",Done
+Creating the SQL Database on the local server,https://github.com/Ahmed-Waseem77/valuni/issues/22,"Hussein-Heggi, nouryasser1",Done
+Database schema design,https://github.com/Ahmed-Waseem77/valuni/issues/8,"elbarbary, Hussein-Heggi, mego74, nouryasser1",Done
+Editing reviews,,,Todo
+Storing Parameterized Reviews,,,Todo
+Adding Parameterized Reviews prompt,,,Todo
+Fetching queries for Home page,,,Todo
+Fetching queries for Professor review pages,,,Todo
+Fetching queries for Course review pages,,,Todo
+Searching algorithm on both professors and courses,,,Todo
+Fetching queries that depend on the implemented searching algorithm,,,Todo
+A Settings drop down menu,,,Todo
+Home Page/ Landing page,https://github.com/Ahmed-Waseem77/valuni/issues/35,"Ahmed-Waseem77, SamanodyJr, youssef-S-Elmahdy",Done
+Merging Backed functionalities and resolving resulting conflicts,https://github.com/Ahmed-Waseem77/valuni/pull/30,Ahmed-Waseem77,Done
+Dev f update,https://github.com/Ahmed-Waseem77/valuni/pull/43,Ahmed-Waseem77,Done
