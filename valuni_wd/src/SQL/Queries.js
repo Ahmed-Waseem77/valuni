@@ -20,11 +20,16 @@ app.use(function(req, res, next) {
 
 var con = mysql.createConnection
 ({
-  host: "zrp.h.filess.io",
-  user: "valuni_ropethird",
-  password: "050941bdad080ca74329ca3543b680010525525b",
-  database: "valuni_ropethird", 
-  port: 3305
+  // host: "zrp.h.filess.io",
+  // user: "valuni_ropethird",
+  // password: "050941bdad080ca74329ca3543b680010525525b",
+  // database: "valuni_ropethird", 
+  // port: 3305
+  host: "db4free.net",
+  user: "vauni_auc",
+  password: "Sallyvaluni",
+  database: "valuni_auc", 
+  port: 3306
 }); 
 
 
