@@ -22,7 +22,7 @@ class ReviewFormEl extends React.Component {
     // hot hena hetet eno ye save el data
     this.setState({ isVisible: false });
     this.props.onClose();
-    this.forceUpdate();
+    this.props.onReviewSubmit();
     
   };
 

@@ -16,6 +16,7 @@ class CourseReviewPage extends React.Component{
   }
 
   handleReviewButtonClick = () => {
+    console.log('Review submitted!');
     this.setState({ reviewButtonClicked: true });
   };
   
@@ -84,7 +85,7 @@ class CourseReviewPage extends React.Component{
         </div>
       </div>
       {reviewButtonClicked && (
-          <ReviewFormEl onClose={() => this.setState({ reviewButtonClicked: false })} />
+          <ReviewFormEl onClose={() => this.setState({ reviewButtonClicked: false })} onReviewSubmit={this.handleReviewSubmit}/>
         )}
     </div>
     )

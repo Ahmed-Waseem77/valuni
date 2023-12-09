@@ -102,20 +102,20 @@
 }
 
 .InputBoxRF{
-  width: 38em;
-  height: 22em;
+  width: 37em;
+  height: 21em;
   background-color: var(--light-1);
   border-radius: 1.2em;
   border: 0;
   color: var(--dark-4);
-  font-size: 0.9em;
+  font-size: 1em;
   box-sizing: border-box;
   padding: 0.8em 0.8em 0.8em 0.8em;
   margin-top: 1.4em;
-  max-width: 38em; 
-  max-height: 22em;
-  min-width: 38em;
-  min-height: 22em;
+  max-width: 37em; 
+  max-height: 21em;
+  min-width: 37em;
+  min-height: 21em;
 
 }
 

@@ -22,7 +22,7 @@ class ReviewButtonEl extends React.Component {
   };
 
   render() {
-    const { buttonClicked } = this.state;
+
 
     return (
       <div>

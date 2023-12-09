@@ -13,20 +13,16 @@ class TeacherReviewPage extends React.Component{
     super(props);
     this.state = {
       reviewButtonClicked: false,
-      shouldRerender: false,
     };
   }
 
   handleReviewButtonClick = () => {
+    console.log('Review submitted!');
     this.setState({ reviewButtonClicked: true });
   };
 
-  handleRerender = () => {
-    this.setState({ shouldRerender: !this.state.shouldRerender });
-  };
-
   render(){
-    const { reviewButtonClicked, shouldRerender } = this.state;
+    const { reviewButtonClicked } = this.state;
 
     return (
       <div className={`reviewpage-container ${reviewButtonClicked ? 'blur-background' : ''}`}>
@@ -82,7 +78,7 @@ class TeacherReviewPage extends React.Component{
         </div>
       </div>
       {reviewButtonClicked && (
-          <ReviewFormEl onClose={() => this.setState({ reviewButtonClicked: false }) } onReviewSubmit={this.handleRerender}/>
+          <ReviewFormEl onClose={() => this.setState({ reviewButtonClicked: false })} />
           )}
     </div>
     )
