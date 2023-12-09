@@ -16,19 +16,16 @@ class TopBar extends Component {
   }
 
   componentDidMount() {
-    // Add event listener to close dropdown on outside click
     document.addEventListener('click', this.handleOutsideClick);
   }
 
   componentWillUnmount() {
-    // Remove event listener when component unmounts
     document.removeEventListener('click', this.handleOutsideClick);
   }
 
   handleOutsideClick = (event) => {
     const dropdownMenu = document.querySelector('.dropdown-menu');
     if (dropdownMenu && !dropdownMenu.contains(event.target)) {
-      // Click occurred outside the dropdown menu, close it
       this.setState({
         suggestions: [],
       });
@@ -55,7 +52,6 @@ class TopBar extends Component {
     const predefinedSuggestions = ['CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX'];
 
     if (inputValue.trim() === '') {
-      // If the input is empty, clear suggestions
       return [];
     }
 
@@ -80,7 +76,6 @@ class TopBar extends Component {
 
   handleButtonClick = () => {
     console.log('Button clicked!');
-    // Add any additional logic you want to perform when the button is clicked
   };
 
   darktheme = () => {
@@ -89,7 +84,6 @@ class TopBar extends Component {
   render() {
     const { inputValue, suggestions } = this.state;
 
-    // Add a class to the body when the dropdown is active
     const isDropdownActive = suggestions.length > 0;
     document.body.classList.toggle('blur-background', isDropdownActive);
 

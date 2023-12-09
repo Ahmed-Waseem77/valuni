@@ -6,9 +6,35 @@ import Ratings1 from '../resources/VAL-STAR-BLUE.svg';
 import {GenButtonEl} from '../react_components/GenericButton'
 
 class ReviewFormEl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isVisible: true,
+    };
+  }
+
+  handleCancelClick = () => {
+    this.setState({ isVisible: false });
+    this.props.onClose(); 
+  };
+
+  handleSubmitClick = () => {
+    // hot hena hetet eno ye save el data
+    this.setState({ isVisible: false });
+    this.props.onClose();
+    this.forceUpdate();
+    
+  };
+
   render() {
+    const { buttonClicked } = this.props;
+
+    if (!this.state.isVisible) {
+      return null;
+    }
     return (
-      <div className="RF">
+      <div className='RF-container'>
+      <div className={`RF ${buttonClicked ? 'visible' : ''}`}>
         <div className="Review-Form">
           <div className='column1'>
             <div className='ReviewTitle'>
@@ -16,7 +42,6 @@ class ReviewFormEl extends React.Component {
             </div>
             <div className='DecorativeLine'></div>
 
-            {/* Overall Section */}
             <div className='Section'>
               <div className='OverallSectionAtt'>
                 Overall
@@ -29,7 +54,6 @@ class ReviewFormEl extends React.Component {
             </div>
             <div className='DecorativeLine'></div>
 
-            {/* Other Sections */}
             <div className='Section'>
               <div className='SectionAtt'>
                 Workload
@@ -96,11 +120,12 @@ class ReviewFormEl extends React.Component {
             </div>
                 <textarea name="text" className = 'InputBoxRF'rows="14" cols="10" wrap="soft" placeholder='Text here...'></textarea>
             <div className='ButtonArea'>
-              <GenButtonEl className='Submitbtn' buttonText="Submit" btnColor = 'SubmitColor'/>
-              <GenButtonEl className='Cancelbtn' buttonText="Cancel" btnColor = 'Cancel_Color'/>
+              <GenButtonEl className='Submitbtn' buttonText="Submit" btnColor = 'SubmitColor' onClick={this.handleSubmitClick}/>
+              <GenButtonEl className='Cancelbtn' buttonText="Cancel" btnColor = 'Cancel_Color' onClick={this.handleCancelClick}/>
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

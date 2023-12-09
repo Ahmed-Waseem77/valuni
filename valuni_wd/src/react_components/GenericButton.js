@@ -4,11 +4,10 @@ import './GenericButton.css';
 
 class GenButtonEl extends React.Component{
     render(){
-    const { buttonText } = this.props;
-    const { btnColor } = this.props;
+    const { buttonText, btnColor, onClick } = this.props;
     return (
     <div>
-      <Link to="" className={`Genbtn ${btnColor}`}> {buttonText} </Link>
+      <Link to="" className={`Genbtn ${btnColor}`} onClick={onClick}> {buttonText} </Link>
     </div>
     )
   }
