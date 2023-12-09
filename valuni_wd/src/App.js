@@ -7,7 +7,7 @@ import './App.css';
 import { LoginPage } from './login/LoginPage';  
 import { Routes, Route } from 'react-router-dom';
 import { HomePage } from './homepage/Homepage'; 
-import { CourseReviewPage } from './reviewpage/coursereviewpage.js'; 
+import  CourseReviewPage  from './reviewpage/coursereviewpage.js'; 
 import { TeacherReviewPage } from './reviewpage/teacherreviewpage.js'; 
 function App() {
 

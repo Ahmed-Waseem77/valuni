@@ -1,78 +1,120 @@
-import React, {Component} from 'react';  
-import './coursereviewpage.css'
-import {TopBar} from '../react_components/TopBar' 
-import {ReviewBoxesScroll} from '../react_components/ReviewScroll'
+import React, { useEffect, useState } from 'react';
+import './coursereviewpage.css';
+import { TopBar } from '../react_components/TopBar';
+import { ReviewBoxesScroll } from '../react_components/ReviewScroll';
 import Ratings from '../resources/VAL-STAR_FULL.svg';
 import Ratings1 from '../resources/VAL-STAR-BLUE.svg';
-import {ReviewButtonEl} from '../react_components/ReviewButton'
+import { ReviewButtonEl } from '../react_components/ReviewButton';
+import { useLocation } from 'react-router-dom';
 
-class CourseReviewPage extends React.Component{
-  render(){
-    return (
-    <div className='reviewpage-container'> 
-      <TopBar/>  
+function CourseReviewPage() {
+  const [courseData, setCourseData] = useState({});
+  const [reviewData, setReviewData] = useState([]);
+  const [instructorData, setInstructorData] = useState([]);
+  const [courseCRN, setCourseCRN] = useState('');
+
+  const location = useLocation();
+  const state = location?.state;
+
+  useEffect(() => {
+    const baseUrl = 'http://localhost:3005';
+
+    if (state && state.crn) {
+      // Decode the title parameter
+      
+      const decodedTitle = decodeURIComponent(state.crn);
+      console.log(decodedTitle);
+      setCourseCRN(decodedTitle);
+
+      fetch(`${baseUrl}/getCourseInfo/${encodeURIComponent(decodedTitle)}`)
+        .then((response) => response.json())
+        .then((data) => setCourseData(data[0]));
+
+      fetch(`${baseUrl}/getReviewContent/${encodeURIComponent(decodedTitle)}`)
+        .then((response) => response.json())
+        .then((data) => setReviewData(data));
+
+      fetch(`${baseUrl}/getCourseInstructors/${encodeURIComponent(decodedTitle)}`)
+        .then((response) => response.json())
+        .then((data) => setInstructorData(data));
+    }
+  }, [state]);
+
+  // Function to calculate the star count based on the value (0-5)
+  const calculateStars = (value) => {
+    const roundedValue = Math.round(value);
+    return Array.from({ length: 5 }, (_, index) => (index < roundedValue ? Ratings : Ratings1));
+  };
+  const calculateAverage = (values) => {
+    // Convert string values to numbers
+    const numericValues = values.map(value => parseFloat(value));
+
+    const validValues = numericValues.filter((value) => !isNaN(value));
+  
+    console.log('Valid Values:', validValues);
+  
+    if (validValues.length === 0) return 0;
+  
+    const sum = validValues.reduce((acc, value) => acc + value, 0);
+    return sum / validValues.length;
+  };
+  
+  
+  return (
+    <div className='reviewpage-container'>
+      <TopBar />
       <div className='reviewpage-body'>
         <div className='review-column1'>
-          <h1 className='titleindent'>{this.props.title}</h1>
+          <h1 className='titleindent'>{courseData.CName}</h1>
           <h2 className='titleinde'>Course Description</h2>
           <div className='scrollable-content'>
-            <h5 className='Desc'>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in rep-
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in rep-
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in rep-
-            </h5>
+            <h5 className='Desc'>{courseData.CDescription}</h5>
           </div>
           <h2 className='titleinde'>Instructors</h2>
           <h5 className='Desc'>
-          Prof Last name, First name <br/>
-          Prof Last name, First name
+            {instructorData.map((instructor) => (
+              <div key={instructor.ID}>
+                {instructor.First_Name} {instructor.Last_Name}
+              </div>
+            ))}
           </h5>
           <h2 className='titleinde'>OVERALL</h2>
           <div className='StarsContainerOA'>
-                <img src={Ratings} className='StarsOA' alt='Stars' />
-                <img src={Ratings} className='StarsOA' alt='Stars' />
-                <img src={Ratings} className='StarsOA' alt='Stars' />
-                <img src={Ratings} className='StarsOA' alt='Stars' />
-                <img src={Ratings} className='StarsOA' alt='Stars' />
+            {calculateStars(calculateAverage([courseData.Workload,courseData.ContentQuality,courseData.Support])).map((star, index) => (
+              <img key={index} src={star} className='StarsOA' alt='Stars' />
+            ))}
+            {console.log(calculateAverage([courseData.Workload,courseData.ContentQuality,courseData.Support]))}
           </div>
-            <h3 className='titleinde'>Light Workload</h3>
-            <div className='StarsContainer1'>
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-            </div>
-            <h3 className='titleinde'>Content</h3>
-            <div className='StarsContainer1'>
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-            </div>
-            <h3 className='titleinde'>Availability</h3>
-            <div className='StarsContainer1'>
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-                <img src={Ratings1} className='Stars' alt='Stars' />
-            </div>
+          <h3 className='titleinde'>Light Workload</h3>
+          <div className='StarsContainer1'>
+            {calculateStars(courseData.Workload).map((star, index) => (
+              <img key={index} src={star} className='Stars' alt='Stars' />
+            ))}
+          </div>
+          <h3 className='titleinde'>Content</h3>
+          <div className='StarsContainer1'>
+            {calculateStars(courseData.ContentQuality).map((star, index) => (
+              <img key={index} src={star} className='Stars' alt='Stars' />
+            ))}
+          </div>
+          <h3 className='titleinde'>Availability</h3>
+          <div className='StarsContainer1'>
+            {calculateStars(courseData.Support).map((star, index) => (
+              <img key={index} src={star} className='Stars' alt='Stars' />
+            ))}
+          </div>
           <div className='rvButton'>
-            <ReviewButtonEl/>
+            <ReviewButtonEl />
           </div>
         </div>
         <div className='review-column2'>
           <h2 className='rev'>REVIEWS</h2>
           <div className='fadin'></div>
-            <ReviewBoxesScroll/> 
+          <ReviewBoxesScroll reviewData={reviewData} />
         </div>
       </div>
     </div>
-    )
-  }
-}
+  );
+};
 
-
-export {CourseReviewPage};
+export default CourseReviewPage;

@@ -20,11 +20,11 @@ app.use(function(req, res, next) {
 
 var con = mysql.createConnection
 ({
-  host: "zrp.h.filess.io",
-  user: "valuni_ropethird",
-  password: "050941bdad080ca74329ca3543b680010525525b",
-  database: "valuni_ropethird", 
-  port: 3305
+  host: "db4free.net",
+  user: "vauni_auc",
+  password: "Sallyvaluni",
+  database: "valuni_auc", 
+  port: 3306
 }); 
 
 
@@ -123,3 +123,65 @@ app.get("/getCourses", function (req, res) {
     res.send(result);
   });
 });
+// Endpoint to get review content
+// Method: GET
+app.get("/getReviewContent/:crn", function (req, res) {
+  const crn = req.params.crn;
+
+  const sql =
+    "SELECT R.User_Major, R.RText, R.Semester, I.First_Name, I.Last_Name, R.Availability, R.Flexibility, R.TeachingStyle, R.Grading, R.Engaging, R.Support, R.ContentQuality, R.Difficulty, R.Workload " +
+    "FROM Review R INNER JOIN Instructors I ON R.Inst_ID = I.ID " +
+    "WHERE R.CRN = ?";
+
+  con.query(sql, [crn], function (err, result) {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Internal Server Error");
+    }
+
+    console.log("Review content fetched");
+    res.send(result);
+  });
+});
+
+// Endpoint to get course info and ratings
+// Method: GET
+app.get("/getCourseInfo/:crn", function (req, res) {
+  const crn = req.params.crn.replace(/%20/g, ' ');
+  const sql =
+    "SELECT CName, Engaging, Support, ContentQuality, Difficulty, Grading, Workload, CDescription " +
+    "FROM Courses " +
+    "WHERE CRN = ?";
+
+  con.query(sql, [crn], function (err, result) {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Internal Server Error");
+    }
+
+    console.log("Course info and ratings fetched");
+    res.send(result);
+  });
+});
+
+// Endpoint to get course instructors
+// Method: GET
+app.get("/getCourseInstructors/:crn", function (req, res) {
+  const crn = req.params.crn;
+
+  const sql =
+    "SELECT I.First_Name, I.Last_Name " +
+    "FROM Courses C INNER JOIN Teach T ON C.CRN = T.CRN INNER JOIN Instructors I ON T.Inst_ID = I.ID " +
+    "WHERE C.CRN = ?";
+
+  con.query(sql, [crn], function (err, result) {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Internal Server Error");
+    }
+
+    console.log("Course instructors fetched");
+    res.send(result);
+  });
+});
+
