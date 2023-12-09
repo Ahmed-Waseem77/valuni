@@ -6,9 +6,41 @@ import Ratings1 from '../resources/VAL-STAR-BLUE.svg';
 import {GenButtonEl} from '../react_components/GenericButton'
 
 class ReviewFormEl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isVisible: true,
+      writtentRemarks: '',
+    };
+  }
+
+  handleCancelClick = () => {
+    this.setState({ isVisible: false });
+    this.props.onClose(); 
+  };
+
+  handleSubmitClick = () => {
+    const writtenRemarks = this.state.writtenRemarks;
+    this.setState({ isVisible: false, writtenRemarks: '' });
+    this.props.onClose();
+    this.props.onReviewSubmit(writtenRemarks);
+    
+  };
+
+  handleInputChange = (event) => {
+
+    this.setState({ writtenRemarks: event.target.value });
+  };
+
   render() {
+    const { buttonClicked } = this.props;
+
+    if (!this.state.isVisible) {
+      return null;
+    }
     return (
-      <div className="RF">
+      <div className='RF-container'>
+      <div className={`RF ${buttonClicked ? 'visible' : ''}`}>
         <div className="Review-Form">
           <div className='column1'>
             <div className='ReviewTitle'>
@@ -16,7 +48,6 @@ class ReviewFormEl extends React.Component {
             </div>
             <div className='DecorativeLine'></div>
 
-            {/* Overall Section */}
             <div className='Section'>
               <div className='OverallSectionAtt'>
                 Overall
@@ -29,7 +60,6 @@ class ReviewFormEl extends React.Component {
             </div>
             <div className='DecorativeLine'></div>
 
-            {/* Other Sections */}
             <div className='Section'>
               <div className='SectionAtt'>
                 Workload
@@ -94,13 +124,16 @@ class ReviewFormEl extends React.Component {
             <div className='WrittenRemarks'>
               Written Remarks (optional)
             </div>
-                <textarea name="text" className = 'InputBoxRF'rows="14" cols="10" wrap="soft" placeholder='Text here...'></textarea>
+                <textarea name="text" className = 'InputBoxRF'rows="14" cols="10" wrap="soft" placeholder='Text here...' 
+                value={this.state.writtenRemarks}
+              onChange={this.handleInputChange}></textarea>
             <div className='ButtonArea'>
-              <GenButtonEl className='Submitbtn' buttonText="Submit" btnColor = 'SubmitColor'/>
-              <GenButtonEl className='Cancelbtn' buttonText="Cancel" btnColor = 'Cancel_Color'/>
+              <GenButtonEl className='Submitbtn' buttonText="Submit" btnColor = 'SubmitColor' onClick={this.handleSubmitClick}/>
+              <GenButtonEl className='Cancelbtn' buttonText="Cancel" btnColor = 'Cancel_Color' onClick={this.handleCancelClick}/>
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }
