@@ -2,8 +2,11 @@
 import React from 'react';
 import './ReviewForm.css';
 import Ratings from '../resources/VAL-STAR_FULL.svg';
+import RatingsEmpty from '../resources/VAL-STAR_EMPTY.svg';
 import Ratings1 from '../resources/VAL-STAR-BLUE.svg';
 import {GenButtonEl} from '../react_components/GenericButton'
+
+
 
 class ReviewFormEl extends React.Component {
   constructor(props) {
@@ -11,8 +14,19 @@ class ReviewFormEl extends React.Component {
     this.state = {
       isVisible: true,
       writtentRemarks: '',
+      isHovered1: false,
+      isHovered2: false,
+      isHovered3: false,
+      isHovered4: false,
+      isHovered5: false,
+      clickoccurred1: false,       
+      clickoccurred2: false,
+      clickoccurred3: false,
+      clickoccurred4: false,
+      clickoccurred5: false,
+
     };
-  }
+  };
 
   handleCancelClick = () => {
     this.setState({ isVisible: false });
@@ -32,12 +46,134 @@ class ReviewFormEl extends React.Component {
     this.setState({ writtenRemarks: event.target.value });
   };
 
+
+  handleClick1 = () => {
+    if (this.state.clickoccurred1) {
+      // Cancel the click and revert to the original state
+      this.setState({
+        clickoccurred1: false,
+        isHovered1: false,
+        isHovered2: false,
+        isHovered3: false,
+        isHovered4: false,
+        isHovered5: false,
+      });
+    } else {
+      // Set the state when the click occurs
+      this.setState({
+        clickoccurred1: true,
+        isHovered1: true,
+        isHovered2: false,
+        isHovered3: false,
+        isHovered4: false,
+        isHovered5: false,
+      });
+    }
+  }
+  
+  handleClick2 = () => {
+    if (this.state.clickoccurred2) {
+      // Cancel the click and revert to the original state
+      this.setState({
+        clickoccurred2: false,
+        isHovered1: false,
+        isHovered2: false,
+        isHovered3: false,
+        isHovered4: false,
+        isHovered5: false,
+      });
+    } else {
+      // Set the state when the click occurs
+      this.setState({
+        clickoccurred2: true,
+        isHovered1: true,
+        isHovered2: true,
+        isHovered3: false,
+        isHovered4: false,
+        isHovered5: false,
+      });
+    }
+  }
+  
+  handleClick3 = () => {
+    if (this.state.clickoccurred3) {
+      // Cancel the click and revert to the original state
+      this.setState({
+        clickoccurred3: false,
+        isHovered1: false,
+        isHovered2: false,
+        isHovered3: false,
+        isHovered4: false,
+        isHovered5: false,
+      });
+    } else {
+      // Set the state when the click occurs
+      this.setState({
+        clickoccurred3: true,
+        isHovered1: true,
+        isHovered2: true,
+        isHovered3: true,
+        isHovered4: false,
+        isHovered5: false,
+      });
+    }
+  }
+  
+  handleClick4 = () => {
+    if (this.state.clickoccurred4) {
+      // If clickoccurred4 is already true, consider it as a cancel action
+      this.setState({
+        clickoccurred4: false,
+        isHovered1: false,
+        isHovered2: false,
+        isHovered3: false,
+        isHovered4: false,
+        isHovered5: false,
+      });
+    } else {
+      // If clickoccurred4 is false, set it to true and other isHovered states accordingly
+      this.setState({
+        clickoccurred4: true,
+        isHovered1: true,
+        isHovered2: true,
+        isHovered3: true,
+        isHovered4: true,
+        isHovered5: false,
+      });
+    }
+  }
+  handleClick5 = () => {
+    if (this.state.clickoccurred5) {
+      // Cancel the click and revert to the original state
+      this.setState({
+        clickoccurred5: false,
+        isHovered1: false,
+        isHovered2: false,
+        isHovered3: false,
+        isHovered4: false,
+        isHovered5: false,
+      });
+    } else {
+      // Set the state when the click occurs
+      this.setState({
+        clickoccurred5: true,
+        isHovered1: true,
+        isHovered2: true,
+        isHovered3: true,
+        isHovered4: true,
+        isHovered5: true,
+      });
+    }
+  }
+  
+
+
   render() {
     const { buttonClicked } = this.props;
-
     if (!this.state.isVisible) {
       return null;
     }
+
     return (
       <div className='RF-container'>
       <div className={`RF ${buttonClicked ? 'visible' : ''}`}>
@@ -53,9 +189,11 @@ class ReviewFormEl extends React.Component {
                 Overall
               </div>
               <div className='StarsContainerRF'>
-                {[1, 2, 3, 4, 5].map((index) => (
-                  <img key={index} src={Ratings} className='StarsRF' alt='Stars' />
-                ))}
+                 <button id="btn1" className='StarsRF' onClick={this.handleClick1} style={{backgroundImage: this.state.isHovered1?  `url(${Ratings})` : this.state.isHovered2?  `url(${Ratings})` : this.state.isHovered3?  `url(${Ratings})` : this.state.isHovered4?  `url(${Ratings})` : this.state.isHovered5?  `url(${Ratings})` : `url(${RatingsEmpty})`}}/> 
+                 <button id="btn2" className='StarsRF' onClick={this.handleClick2} style={{backgroundImage: this.state.isHovered2?  `url(${Ratings})` : this.state.isHovered3?  `url(${Ratings})` : this.state.isHovered4?  `url(${Ratings})` : this.state.isHovered5?  `url(${Ratings})` : `url(${RatingsEmpty})`}}/> 
+                 <button id="btn3" className='StarsRF' onClick={this.handleClick3} style={{backgroundImage: this.state.isHovered3?  `url(${Ratings})` : this.state.isHovered4?  `url(${Ratings})` : this.state.isHovered5?  `url(${Ratings})` : `url(${RatingsEmpty})`}}/> 
+                 <button id="btn4" className='StarsRF' onClick={this.handleClick4} style={{backgroundImage: this.state.isHovered4?  `url(${Ratings})` : this.state.isHovered5?  `url(${Ratings})` : `url(${RatingsEmpty})`}}/> 
+                 <button id="btn5" className='StarsRF' onClick={this.handleClick5} style={{backgroundImage: this.state.isHovered5?  `url(${Ratings})` : `url(${RatingsEmpty})`}}/> 
               </div>
             </div>
             <div className='DecorativeLine'></div>
