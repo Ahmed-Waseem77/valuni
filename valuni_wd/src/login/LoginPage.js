@@ -20,7 +20,6 @@ class LoginPage extends React.Component {
   // Function to handle the login button click
   handleLoginButtonClick = async () => {
     const { email, password } = this.state;
-
     // Implement your sign-in logic here
     // For example, you can call your sign-in function and handle the result
     // signInWithEmailAndPasswordFunction(email, password);
@@ -44,6 +43,7 @@ class LoginPage extends React.Component {
               email={this.state.email}
               password={this.state.password}
               onInputChange={this.handleInputChange}
+              onLoginButtonClick={this.handleLoginButtonClick}
             />
           </div>
 

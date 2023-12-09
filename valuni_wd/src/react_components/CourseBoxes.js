@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 class CourseBoxes extends React.Component {
   render() {
     const { title, lastName, firstName } = this.props;
- 
+    
     return (
       <div className='flex'>
       <div className='CourseBox' id='CourseBox'>
@@ -33,14 +33,12 @@ class CourseBoxes extends React.Component {
       </div>
       </div>
     )
-    // Define prop types for better validation
-    CourseBoxes.propTypes = {
-    courseName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired,
-    firstName: PropTypes.string.isRequired,
-    };
   }
 }
-
-
+// Define prop types for better validation
+CourseBoxes.propTypes = {
+  title: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  firstName: PropTypes.string.isRequired,
+  };
 export { CourseBoxes };
