@@ -10,7 +10,10 @@ Limit 5;
 -- 
 
 SELECT C.CRN, C.Engaging, C.Support, C.ContentQuality, C.Difficulty, C.Grading, C.Workload, I.First_Name, I.Last_Name, I.Grading, I.TeachingStyle, I.Flexibility, I.Availability  
-FROM Courses C INNER JOIN Take T ON T.CRN = C.CRN
+FROM Courses C INNER JOIN Teach T ON T.CRN = C.CRN
 INNER JOIN Instructors I ON T.Inst_ID = I.ID 
-WHERE T.User_Email = "sarah.yassin@aucegypt.edu" 
+WHERE C.Major = 
+				(SELECT Major 
+                FROM Users
+                WHERE Email = "sarah.yassin@aucegypt.edu")
 LIMIT 5;
