@@ -10,6 +10,7 @@ class ReviewFormEl extends React.Component {
     super(props);
     this.state = {
       isVisible: true,
+      writtentRemarks: '',
     };
   }
 
@@ -19,11 +20,16 @@ class ReviewFormEl extends React.Component {
   };
 
   handleSubmitClick = () => {
-    // hot hena hetet eno ye save el data
-    this.setState({ isVisible: false });
+    const writtenRemarks = this.state.writtenRemarks;
+    this.setState({ isVisible: false, writtenRemarks: '' });
     this.props.onClose();
-    this.props.onReviewSubmit();
+    this.props.onReviewSubmit(writtenRemarks);
     
+  };
+
+  handleInputChange = (event) => {
+
+    this.setState({ writtenRemarks: event.target.value });
   };
 
   render() {
@@ -118,7 +124,9 @@ class ReviewFormEl extends React.Component {
             <div className='WrittenRemarks'>
               Written Remarks (optional)
             </div>
-                <textarea name="text" className = 'InputBoxRF'rows="14" cols="10" wrap="soft" placeholder='Text here...'></textarea>
+                <textarea name="text" className = 'InputBoxRF'rows="14" cols="10" wrap="soft" placeholder='Text here...' 
+                value={this.state.writtenRemarks}
+              onChange={this.handleInputChange}></textarea>
             <div className='ButtonArea'>
               <GenButtonEl className='Submitbtn' buttonText="Submit" btnColor = 'SubmitColor' onClick={this.handleSubmitClick}/>
               <GenButtonEl className='Cancelbtn' buttonText="Cancel" btnColor = 'Cancel_Color' onClick={this.handleCancelClick}/>

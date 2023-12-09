@@ -18,6 +18,14 @@ class CourseReviewPage extends React.Component{
   handleReviewButtonClick = () => {
     console.log('Review submitted!');
     this.setState({ reviewButtonClicked: true });
+
+  };
+
+  handleReviewSubmit = (writtenRemarks) => {
+
+    console.log('Review submitted with written remarks:', writtenRemarks);
+
+    this.setState({ reviewButtonClicked: false });
   };
   
   render(){
