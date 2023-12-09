@@ -1,4 +1,3 @@
-// RatingsBoxesEL.jsx
 import React from 'react';
 import Ratings from '../resources/VAL-STAR_FULL.svg';
 import './RatingsBoxes.css';
