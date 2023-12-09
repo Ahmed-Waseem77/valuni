@@ -9,8 +9,8 @@
   background-color: var(--light-1); /* Gray background color */
   border-radius: 1.5em; /* Curved edges */
   text-align: left;
-  width: 20rem; /* Set a fixed width for the box */
-  height:10em;
+  width: 25vw; /* Set a fixed width for the box */
+  height:20vh;
   margin: 0; /* No margin at the beginning of the box */
 }
 
@@ -22,7 +22,6 @@
   align-items: center;
   justify-content: center;
   
-
 }
 
 .RatingDetails {
@@ -43,13 +42,27 @@
 }
 
 .CourseTitle {
-  font-size: 1.71875em;
+  font-size: 1.6em;
   font-weight: bold;
   color: var(--dark-1);
+}
 
+.CourseTitle :-webkit-any(:any-link){
+  text-decoration: none;
+  color: var(--dark-1); 
+}
+.CourseTitle :-webkit-any(:any-link):hover{
+  color: var(--acc-blue-light); 
 }
 
 .ProfDetails {
   font-size: 1.25em;
-  color: var(--dark-2);
+  color: var(--dark-4);
+}
+.ProfDetails :-webkit-any(:any-link){
+  text-decoration: none;
+  color: var(--dark-4); 
+}
+.ProfDetails :-webkit-any(:any-link):hover{
+  color: var(--acc-blue-light); 
 }

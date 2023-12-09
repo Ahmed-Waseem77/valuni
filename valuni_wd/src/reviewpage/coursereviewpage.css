@@ -1,0 +1,136 @@
+@import url('../ConstColors.css');
+.review-column1 
+{
+    color: var(--dark-1) ;
+    font-size: large;
+    width: 33%;
+}
+.titleindent
+{
+    text-indent: 0.5em;
+}
+.titleinde
+{
+    text-indent: 2em;
+    margin-bottom: 0.2em;
+    text-align: left;
+    
+}
+
+.review-column1 h1
+{
+    margin: 0em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.review-column2 
+{
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+
+}
+.review-column1 h2
+{
+    font-size: medium;
+}
+.review-column1 h3
+{
+    font-size: small;
+}
+.review-column2 .rev
+{
+    color: var(--dark-1) ;
+    text-indent: 1em;
+    font-size: x-large;
+    margin-block-end: 0em;
+    margin-block-start: 1rem;
+    
+
+}
+.reviewpage-body
+{
+    display: inline-flex;
+    width: 100%;
+}
+
+.rvButton
+{
+   margin-left: 2em;
+   margin-top: 0.4em;
+}
+.Desc
+{
+    font-size: small;
+    width: 80%;
+    text-align: justify;
+    color: var(--dark-4);
+    margin-left: 3em;
+    margin-top: 0em;
+}
+.StarsContainerOA
+{
+    margin-left: 1.7em;
+}
+.StarsOA
+{
+    width: 2em;
+    margin-left: 0.25em;
+}
+.StarsContainer1
+{
+    margin-left: 2em;
+
+}
+
+.scrollable-content
+{
+    height: 10%;
+    overflow-y: auto;
+
+}
+.scrollable-content::-webkit-scrollbar{
+    width: 0.6em;
+    
+}
+  .scrollable-content::-webkit-scrollbar-track{
+    border-radius: 2em;
+    width: 0.6em;
+    margin-left: 0.6em;
+  }
+  .scrollable-content::-webkit-scrollbar-thumb {
+    background: var(--light-1) ; 
+    border-radius: 5rem;
+    width:0.6em;
+    border: 1em solid var(--light-1);
+
+  }
+  .scrollable-content::-webkit-scrollbar-track-piece{
+    width:0.6em;
+
+  } 
+  .fadin
+  {
+    height:1.5vh;
+    width:90%;
+    margin-bottom: -2vh;
+    box-shadow: 0px 1vh 3vh var(--light-1);
+    z-index:1;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .scrollable-content {
+    animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .review-column1 {
+    animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .review-column2 {
+    animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
+    }
+  }
+  
