@@ -21,6 +21,11 @@ class TeacherReviewPage extends React.Component{
     this.setState({ reviewButtonClicked: true });
   };
 
+  handleReviewSubmit = (writtenRemarks) => {
+    console.log('Review submitted with written remarks:', writtenRemarks);
+    this.setState({ reviewButtonClicked: false });
+  };
+
   render(){
     const { reviewButtonClicked } = this.state;
 
@@ -78,7 +83,7 @@ class TeacherReviewPage extends React.Component{
         </div>
       </div>
       {reviewButtonClicked && (
-          <ReviewFormEl onClose={() => this.setState({ reviewButtonClicked: false })} />
+          <ReviewFormEl onClose={() => this.setState({ reviewButtonClicked: false })} onReviewSubmit={this.handleReviewSubmit}/>
           )}
     </div>
     )
