@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './coursereviewpage.css';
+import { useNavigate } from 'react-router-dom';
 import { TopBar } from '../react_components/TopBar';
 import { ReviewBoxesScroll } from '../react_components/ReviewScroll';
 import Ratings from '../resources/VAL-STAR_FULL.svg';
@@ -15,6 +16,7 @@ function CourseReviewPage() {
 
   const location = useLocation();
   const state = location?.state;
+  const navigate = useNavigate();
 
   useEffect(() => {
     const baseUrl = 'http://localhost:3005';
@@ -58,7 +60,10 @@ function CourseReviewPage() {
     const sum = validValues.reduce((acc, value) => acc + value, 0);
     return sum / validValues.length;
   };
-  
+  const handleReviewButtonClick = () => {
+    // Use navigate to go to the ReviewForm component
+    navigate('/ReviewForm', { state: { crn: courseCRN } });
+  };
   
   return (
     <div className='reviewpage-container'>
@@ -104,7 +109,8 @@ function CourseReviewPage() {
             ))}
           </div>
           <div className='rvButton'>
-            <ReviewButtonEl />
+
+            <ReviewButtonEl onButtonClick={handleReviewButtonClick}/>
           </div>
         </div>
         <div className='review-column2'>
@@ -113,9 +119,6 @@ function CourseReviewPage() {
           <ReviewBoxesScroll reviewData={reviewData} />
         </div>
       </div>
-      {reviewButtonClicked && (
-          <ReviewFormEl onClose={() => this.setState({ reviewButtonClicked: false })} onReviewSubmit={this.handleReviewSubmit}/>
-        )}
     </div>
   );
 };
