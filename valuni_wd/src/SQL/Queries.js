@@ -185,3 +185,17 @@ app.get("/getCourseInstructors/:crn", function (req, res) {
   });
 });
 
+app.post('/insertReview', (req, res) => {
+  const { User_Major, RText, User_Email, Semester, CRN, Grading, Workload, Difficulty, Support } = req.body;
+
+  const sql = 'INSERT INTO Review (User_Major, RText, User_Email, Semester, CRN, Grading, Workload, Difficulty, Support) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+
+  connection.query(sql, [User_Major, RText, User_Email, Semester, CRN, Grading, Workload, Difficulty, Support], (error, results) => {
+    if (error) {
+      console.error('Error executing query:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+      res.status(200).json({ message: 'Review inserted successfully' });
+    }
+  });
+});
