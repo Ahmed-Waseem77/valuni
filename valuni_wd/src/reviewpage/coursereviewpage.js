@@ -31,11 +31,9 @@ function CourseReviewPage() {
       fetch(`${baseUrl}/getCourseInfo/${encodeURIComponent(decodedTitle)}`)
         .then((response) => response.json())
         .then((data) => setCourseData(data[0]));
-
       fetch(`${baseUrl}/getReviewContent/${encodeURIComponent(decodedTitle)}`)
         .then((response) => response.json())
         .then((data) => setReviewData(data));
-
       fetch(`${baseUrl}/getCourseInstructors/${encodeURIComponent(decodedTitle)}`)
         .then((response) => response.json())
         .then((data) => setInstructorData(data));
@@ -54,7 +52,6 @@ function CourseReviewPage() {
 
     const validValues = numericValues.filter((value) => !isNaN(value));
 
-    console.log('Valid Values:', validValues);
 
     if (validValues.length === 0) return 0;
 
@@ -71,7 +68,7 @@ function CourseReviewPage() {
     console.log('Review submitted with written remarks:', writtenRemarks);
     setReviewButtonClicked(false);
   };
-
+  
   return (
     <div className={`reviewpage-container ${reviewButtonClicked ? 'blur-background' : ''}`}>
       <TopBar />
@@ -89,6 +86,9 @@ function CourseReviewPage() {
                 {instructor.First_Name} {instructor.Last_Name}
               </div>
             ))}
+            {console.log("instructorData: ", instructorData)}
+            {console.log("courseData: ", courseData)}
+            {console.log("reviewData: ", reviewData)  }
           </h5>
           <h2 className='titleinde'>OVERALL</h2>
           <div className='StarsContainerOA'>
@@ -124,12 +124,24 @@ function CourseReviewPage() {
         <div className='review-column2'>
           <h2 className='rev'>REVIEWS</h2>
           <div className='fadin'></div>
+          {/* Add conditional rendering */}
+        {reviewData.length > 0 ? (
           <ReviewBoxesScroll reviewData={reviewData} />
+        ) : (
+          <p>Loading reviews...</p>
+        )}
         </div>
       </div>
+      
       {reviewButtonClicked && (
-        <ReviewFormEl onClose={() => setReviewButtonClicked(false)} onReviewSubmit={handleReviewSubmit} />
+        <ReviewFormEl
+          courseCRN={courseCRN}
+          Inst_ID={instructorData[0].ID}
+          onClose={() => setReviewButtonClicked(false)}
+          onReviewSubmit={handleReviewSubmit}
+        />
       )}
+      {console.log("courseCRN `11: ", instructorData)}
     </div>
   );
 }

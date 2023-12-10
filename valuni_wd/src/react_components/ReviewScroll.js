@@ -4,14 +4,15 @@ import { ReviewBoxesArray } from './ReviewBoxesArray';
 
 
 
-class ReviewBoxesScroll extends  React.Component{
+// Import statements...
 
-    render(){
-        return(
-                <ReviewBoxesArray/>
-        )}
-}
-
-
-
-export {ReviewBoxesScroll}
+class ReviewBoxesScroll extends React.Component {
+        render() {
+          const { reviewData } = this.props;
+          console.log(reviewData);
+          return <ReviewBoxesArray reviewData={reviewData} />;
+        }
+      }
+      
+export { ReviewBoxesScroll };
+      

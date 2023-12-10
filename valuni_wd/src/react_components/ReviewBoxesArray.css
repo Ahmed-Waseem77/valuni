@@ -6,9 +6,10 @@
     overflow-y: auto;
     width: 65vw;
     margin-top: 3vh;
-    display: flex;
+
     margin-bottom: 3vh;
     justify-content: space-evenly;
+    display: flex;
 }
 .containerRatingBoxes::-webkit-scrollbar{
     width: 0.6em;

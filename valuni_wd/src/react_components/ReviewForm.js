@@ -25,12 +25,62 @@ class ReviewFormEl extends React.Component {
   };
 
   handleSubmitClick = () => {
-    const writtenRemarks = this.state.writtenRemarks;
-    this.setState({ isVisible: false, writtenRemarks: '' });
-    this.props.onClose();
-    this.props.onReviewSubmit(writtenRemarks);
-    
+    const { writtenRemarks } = this.state;
+    const {
+      User_Major,
+      Semester,
+      courseCRN,
+      onReviewSubmit,
+      onClose,
+      Inst_ID,
+    } = this.props;
+    console.log('courseCRN:', courseCRN);
+    const Grading = this.getStarRating('isHoveredBlue2');
+    const Workload = this.getStarRating('isHoveredBlue1');
+    const Difficulty = this.getStarRating('isHoveredBlue4');
+    const Support = this.getStarRating('isHoveredBlue5');
+    const ContentQuality = this.getStarRating('isHoveredBlue3');
+  
+    const reviewData = {
+      User_Major: 'Construction Engineering', // Replace with the actual user major
+      RText: writtenRemarks,
+      User_Email: 'ahmedmohamed@aucegypt.edu', // Replace with the actual user email
+      Semester: 'Fall 2022', // Replace with the actual semester
+      CRN: courseCRN, // Replace with the actual CRN
+      Grading,
+      Workload,
+      Difficulty,
+      Support,
+      ContentQuality,
+      Inst_ID: Inst_ID, // Replace with the actual instructor ID
+    };
+  
+    fetch('http://localhost:3005/insertReview', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(reviewData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+        onReviewSubmit(writtenRemarks); // Assuming you want to do something after successful submission
+        this.setState({ isVisible: false, writtenRemarks: '' });
+        onClose();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        // Handle error, e.g., show an error message
+      });
   };
+
+  getStarRating = (ratingKey) => {
+    // Extract the rating from the state based on the provided ratingKey
+    const ratingIndex = parseInt(ratingKey.slice(-1), 10); // Extract the numeric part from the ratingKey
+    console.log('Rating index:', ratingIndex);
+    return ratingIndex; // If the state property is true, return the rating index, otherwise 0
+  };  
 
   handleInputChange = (event) => {
 

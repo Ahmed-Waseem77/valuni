@@ -34,6 +34,7 @@ function HomePage() {
       <TopBar />
       <div className="homepage-title"> <h5>COURSES IN YOUR MAJOR</h5> </div>
       <Scroll data={coursesData} /> {/* Pass the fetched data to Scroll component */}
+      {console.log('homwe', coursesData)}
       <div className="divider"> </div>
       <div className="homepage-title"> <h5>COURSES YOU HAVE TAKEN</h5> </div>
       <Scroll data={coursesData} /> {/* Pass the fetched data to Scroll component */}
