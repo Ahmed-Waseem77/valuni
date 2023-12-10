@@ -13,9 +13,7 @@
   z-index: 998;
   position: fixed;
   top: 20%;
-  left: 15%;
-
-  
+  left: 8%;
 
 }
 
@@ -23,6 +21,7 @@
   display: fixed;
 
 }
+
 
 .column1 {
   flex: 1;
@@ -78,14 +77,38 @@
 
 .StarsContainerRF {
   display: flex;
+  justify-content: space-evenly;
+}
+.BlueStarsContainerRF
+{
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 0.8em;
 }
 
-.StarsRF {
+.StarsRF
+{
+  border: none;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius:0 !important;
+  cursor: pointer;
+  background-size: cover; 
+  padding: 1.2em;
+  margin-right: 0.2em;
   width: 1.8em;
   height: 1.8em;
 }
 
 .BlueStarsRF {
+  border: none;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius:0 !important;
+  cursor: pointer;
+  background-size: cover; 
+  padding: 1em;
+  margin-right: 0.2em;
   width: 1.4em !important;
   height: 1.4em !important;
 }
