@@ -49,7 +49,7 @@ class TopBar extends Component {
   };
 
   generateSuggestions = (inputValue) => {
-    const predefinedSuggestions = ['CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX', 'CSCE XXXX'];
+    const predefinedSuggestions = [ 'CSCE 000/2203', 'FINC 303/2101', 'CSCE 102/1000', 'CSCE 239L/2302', 'CSCE 527/5262'];
 
     if (inputValue.trim() === '') {
       return [];

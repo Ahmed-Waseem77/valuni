@@ -3,8 +3,10 @@ import './coursereviewpage.css';
 import { useNavigate } from 'react-router-dom';
 import { TopBar } from '../react_components/TopBar';
 import { ReviewBoxesScroll } from '../react_components/ReviewScroll';
-import Ratings from '../resources/VAL-STAR_FULL.svg';
-import Ratings1 from '../resources/VAL-STAR-BLUE.svg';
+import Ratings from '../resources/VAL-STAR-BLUE.svg';
+import Ratings1 from '../resources/BR-STARS_BLUE_EMPTY.svg';
+import Oratings from '../resources/VAL-STAR_FULL.svg'; 
+import Oratings1 from '../resources/BR-STAR_ORANGE_EMPTY.svg';
 import { ReviewButtonEl } from '../react_components/ReviewButton';
 import { useLocation } from 'react-router-dom';
 import { ReviewFormEl } from '../react_components/ReviewForm'; // Update the path
@@ -44,6 +46,11 @@ function CourseReviewPage() {
   const calculateStars = (value) => {
     const roundedValue = Math.round(value);
     return Array.from({ length: 5 }, (_, index) => (index < roundedValue ? Ratings : Ratings1));
+  };
+
+  const calculateStarsO = (value) => {
+    const roundedValue = Math.round(value);
+    return Array.from({ length: 5 }, (_, index) => (index < roundedValue ? Oratings : Oratings1));
   };
 
   const calculateAverage = (values) => {
@@ -92,7 +99,7 @@ function CourseReviewPage() {
           </h5>
           <h2 className='titleinde'>OVERALL</h2>
           <div className='StarsContainerOA'>
-            {calculateStars(calculateAverage([courseData.Workload, courseData.ContentQuality, courseData.Support])).map(
+            {calculateStarsO(calculateAverage([courseData.Workload, courseData.ContentQuality, courseData.Support])).map(
               (star, index) => (
                 <img key={index} src={star} className='StarsOA' alt='Stars' />
               )
