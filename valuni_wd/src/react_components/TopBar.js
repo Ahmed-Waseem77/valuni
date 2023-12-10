@@ -114,7 +114,7 @@ class TopBar extends Component {
           </div>
           <div className="label">AUC</div>
 
-          <div className="themebtn"><button onClick={this.darktheme}><FaToggleOn/></button></div>
+          {/* <div className="themebtn"><button onClick={this.darktheme}><FaToggleOn/></button></div> */}
         </div>
         <div className="inside-corner"> </div>
       </div>
