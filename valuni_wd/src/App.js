@@ -6,7 +6,7 @@ import testFirebase from './firebase/config.js';
 import { LoginPage } from './login/LoginPage';  
 import { Routes, Route } from 'react-router-dom';
 import { HomePage } from './homepage/Homepage'; 
-import { CourseReviewPage } from './reviewpage/coursereviewpage.js'; 
+import  CourseReviewPage  from './reviewpage/coursereviewpage.js'; 
 import { TeacherReviewPage } from './reviewpage/teacherreviewpage.js'; 
 import {ReviewFormEl} from './react_components/ReviewForm.js';
 function App() {
