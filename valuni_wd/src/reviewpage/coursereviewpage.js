@@ -7,13 +7,14 @@ import Ratings from '../resources/VAL-STAR_FULL.svg';
 import Ratings1 from '../resources/VAL-STAR-BLUE.svg';
 import { ReviewButtonEl } from '../react_components/ReviewButton';
 import { useLocation } from 'react-router-dom';
+import { ReviewFormEl } from '../react_components/ReviewForm'; // Update the path
 
 function CourseReviewPage() {
   const [courseData, setCourseData] = useState({});
   const [reviewData, setReviewData] = useState([]);
   const [instructorData, setInstructorData] = useState([]);
   const [courseCRN, setCourseCRN] = useState('');
-
+  const [reviewButtonClicked, setReviewButtonClicked] = useState(false); // Use useState hook
   const location = useLocation();
   const state = location?.state;
   const navigate = useNavigate();
@@ -23,7 +24,6 @@ function CourseReviewPage() {
 
     if (state && state.crn) {
       // Decode the title parameter
-      
       const decodedTitle = decodeURIComponent(state.crn);
       console.log(decodedTitle);
       setCourseCRN(decodedTitle);
@@ -47,26 +47,33 @@ function CourseReviewPage() {
     const roundedValue = Math.round(value);
     return Array.from({ length: 5 }, (_, index) => (index < roundedValue ? Ratings : Ratings1));
   };
+
   const calculateAverage = (values) => {
     // Convert string values to numbers
-    const numericValues = values.map(value => parseFloat(value));
+    const numericValues = values.map((value) => parseFloat(value));
 
     const validValues = numericValues.filter((value) => !isNaN(value));
-  
+
     console.log('Valid Values:', validValues);
-  
+
     if (validValues.length === 0) return 0;
-  
+
     const sum = validValues.reduce((acc, value) => acc + value, 0);
     return sum / validValues.length;
   };
+
   const handleReviewButtonClick = () => {
-    // Use navigate to go to the ReviewForm component
-    navigate('/ReviewForm', { state: { crn: courseCRN } });
+    console.log('Review submitted!');
+    setReviewButtonClicked(true);
   };
-  
+
+  const handleReviewSubmit = (writtenRemarks) => {
+    console.log('Review submitted with written remarks:', writtenRemarks);
+    setReviewButtonClicked(false);
+  };
+
   return (
-    <div className='reviewpage-container'>
+    <div className={`reviewpage-container ${reviewButtonClicked ? 'blur-background' : ''}`}>
       <TopBar />
       <div className='reviewpage-body'>
         <div className='review-column1'>
@@ -85,10 +92,12 @@ function CourseReviewPage() {
           </h5>
           <h2 className='titleinde'>OVERALL</h2>
           <div className='StarsContainerOA'>
-            {calculateStars(calculateAverage([courseData.Workload,courseData.ContentQuality,courseData.Support])).map((star, index) => (
-              <img key={index} src={star} className='StarsOA' alt='Stars' />
-            ))}
-            {console.log(calculateAverage([courseData.Workload,courseData.ContentQuality,courseData.Support]))}
+            {calculateStars(calculateAverage([courseData.Workload, courseData.ContentQuality, courseData.Support])).map(
+              (star, index) => (
+                <img key={index} src={star} className='StarsOA' alt='Stars' />
+              )
+            )}
+            {console.log(calculateAverage([courseData.Workload, courseData.ContentQuality, courseData.Support]))}
           </div>
           <h3 className='titleinde'>Light Workload</h3>
           <div className='StarsContainer1'>
@@ -109,8 +118,7 @@ function CourseReviewPage() {
             ))}
           </div>
           <div className='rvButton'>
-
-            <ReviewButtonEl onButtonClick={handleReviewButtonClick}/>
+            <ReviewButtonEl onButtonClick={handleReviewButtonClick} />
           </div>
         </div>
         <div className='review-column2'>
@@ -119,8 +127,11 @@ function CourseReviewPage() {
           <ReviewBoxesScroll reviewData={reviewData} />
         </div>
       </div>
+      {reviewButtonClicked && (
+        <ReviewFormEl onClose={() => setReviewButtonClicked(false)} onReviewSubmit={handleReviewSubmit} />
+      )}
     </div>
   );
-};
+}
 
 export default CourseReviewPage;
