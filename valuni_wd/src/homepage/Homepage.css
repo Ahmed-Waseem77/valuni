@@ -1,5 +1,9 @@
 @import '../ConstColors.css'; 
 
+body::-webkit-scrollbar{
+ display: none;
+}
+
 .homepage-container { 
 
   align-items: center; 
@@ -26,3 +30,4 @@
 .divider { 
 margin-bottom: 7vh;
 }
+
