@@ -1,0 +1,50 @@
+@import "../ConstColors.css";
+
+.containerRatingBoxes
+{
+    height: 100vh;
+    overflow-y: auto;
+    width: 65vw;
+    margin-top: 3vh;
+
+    margin-bottom: 3vh;
+    justify-content: space-evenly;
+    display: flex;
+}
+.containerRatingBoxes::-webkit-scrollbar{
+    width: 0.6em;
+    
+}
+  .containerRatingBoxes::-webkit-scrollbar-track{
+    border-radius: 2em;
+    width: 0.6em;
+    margin-left: 0.6em;
+  }
+  .containerRatingBoxes::-webkit-scrollbar-thumb {
+    background: var(--light-1) ; 
+    border-radius: 5rem;
+    width:0.6em;
+    border: 1em solid var(--light-1);
+
+  }
+  .containerRatingBoxes::-webkit-scrollbar-track-piece{
+    width:0.6em;
+
+  } 
+
+@media (prefers-reduced-motion: no-preference) {
+  .containerRatingBoxes {
+  animation: fadeInBottom 1.5s var(--bezier-easeInOutBack);
+  }
+}
+
+
+.containerperbox
+{
+    flex-direction: column;
+    display: flex;
+    width: 30vw;
+    margin-top: 3vh;
+    align-items: center;
+    justify-content: flex-start;
+}

@@ -1,110 +1,182 @@
-@import url('../ConstColors.css');
 
+@import "../ConstColors.css";
 
 .Topbar {
-    background-color: var( --dark-1); 
-    padding-top: 1.5vh; 
-    padding-bottom: 1.5vh; 
-    display: flex; 
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: var(--dark-2); 
-    height: 5vh;   
-    margin: auto;
-  }
-  
-
-  .SearchBar {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the content horizontally within SearchBar */
-    padding-top: 0.3vh;
-    padding-bottom: 0.3vh;
-    border: 1.5vh solid var(--dark-2); /* Change the border color as needed */
-    border: 0.58vh solid;
-    border-radius: 2vh; 
-    border-color: var(--dark-2);
-    background-color: var(--dark-2);
-    color: var(--dark-1); 
-    width: 40vw;
-    height: 3vh;
-  }
-  
-  /* Styles for the text input */
-  .TxtBar {
- 
-    width: 70vw;
-    height: 2.5vh; 
-
-    
-    justify-content: center;  
-    align-items: center;
-    
-    border: 0px solid;
-    border-color: rgba(0,0,0,0);
-    background-color: rgba(0,0,0,0);
-    
-    color: white; 
-    font-size: 0.9em;
-
-   
-} 
-
-.TxtBar:focus{
-    outline: none;
-}
-  
-  /* Add more styles or adjust existing styles as per your design */
-  
-  /* Optional: Add styles for the icon if you want to customize it */
-  .btnSearch{
-   
-    font-size: 2.3vh;
-    color: var(--dark-3); 
-    padding-right: 0.4vw; 
-    margin-top: 0.4vh; 
-
-    cursor: pointer;
-    border: 0em solid;
-    border-left: 0em;
-    border-radius: 0em; 
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: rgba(0,0,0,0);
-    border-color: rgba(0,0,0,0);
-} 
-  
-.App-logo { 
-    padding: 0.5vh; 
-    margin-right: 23vw;
-    height: 6vh;      
-    /* opacity: 10%; */
-    /* padding: 2rem;  */
-    
+  background-color: var(--dark-1);
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-2);
+  height: 5vh;
+  margin: auto;
+  position: relative;
+  z-index: 11000;
+  justify-content: space-evenly;
 }
 
-.label{
-    font-size: 3vh;
-    font-weight: bold;
-    margin-left: 23vw;
-} 
+.Topbar-container {
+  position: relative;
+  z-index: 11000; 
 
-.inside-corner { 
-background-color: rgba(0,0,0,0); 
-width: 100%;
-height: 5vh;
-border-radius: 5vw 5vw 0 0; 
-box-shadow: -1px -39px 0px 38px var(--dark-1);
--webkit-box-shadow: -1px -39px 0px 38px var(--dark-1);
--moz-box-shadow: -1px -39px 0px 38px var(--dark-1);
+}
 
-} 
+.blur-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px); 
+  z-index: 1999; 
+  pointer-events: none; 
+  backdrop-filter: blur(5px); 
+  z-index: 1999; 
+  pointer-events: none; 
+}
 
+.SearchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.3vh;
+  padding-bottom: 0.3vh;
+  border: 1.5vh solid var(--dark-2);
+  border-radius: 2vh;
+  border-color: var(--dark-2);
+  background-color: var(--dark-2);
+  color: var(--dark-1);
+  width: 40vw;
+  height: 1.5vh;
+}
+
+.TxtBar {
+  width: 70vw;
+  height: 2.5vh;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.TxtBar:focus {
+  outline: none;
+}
+
+.btnSearch {
+  font-size: 2.3vh;
+  color: var(--dark-3);
+  padding-right: 0.4vw;
+  margin-top: 0.4vh;
+  cursor: pointer;
+  border: 0em solid;
+  border-left: 0em;
+  border-radius: 0em;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.App-logo {
+  padding: 0.5vh;
+  margin-right: 15vw;
+  height: 6vh;
+}
+
+.label {
+  font-size: 3vh;
+  font-weight: bold;
+  margin-left: 16vw;
+}
+
+.inside-corner {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 5vh;
+  border-radius: 5vw 5vw 0 0;
+  box-shadow: -1px -39px 0px 38px var(--dark-1);
+  -webkit-box-shadow: -1px -39px 0px 38px var(--dark-1);
+  -moz-box-shadow: -1px -39px 0px 38px var(--dark-1);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .Topbar-container {
-  animation: fadeInTop ease-in-out 0.5s 1 normal forwards;   
+    animation: fadeInTop ease-in-out 0.5s 1 normal forwards;
   }
 }
 
+
+.dropdown-menu {
+  position: absolute;
+  top: 1.2vw;
+  left: 0;
+  transform: translateY(3vw); 
+  width: 40vw;
+  background-color: var(--light-2);
+  border-radius: 0.8em; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-bottom: 1em;
+  z-index: 120000;
+  
+}
+
+.dropdown-item {
+  position: relative;
+  color: #333;
+  font-size: 1.4svw;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid lightgray;
+  display: block; 
+  box-sizing: border-box; 
+  width: 100%;
+  padding: 0.1em;
+}
+
+.dropdown-item:hover {
+  color: var(--acc-blue-light); 
+}
+
+
+.StarsContainer11 {
+    padding-left: 13.6em;
+    display: inline-block;
+
+}
+
+.Stars {
+  width: 1em !important; 
+  height: 1em !important; 
+}
+
+.suggestion-content {
+  padding-left: 1.5em;
+  display: inline-block;
+}
+.themebtn button
+{
+  background-color:rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: var(--acc-orange);
+  font-size:xx-large;
+  rotate: 180;
+  border: none;
+
+}
+.themebtn button :active
+{
+   
+  color: var(--acc-blue-light);
+  rotate: 0;
+  font-size:xx-large;
+  
+}

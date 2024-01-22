@@ -1,20 +1,19 @@
-import './Scroll.css';
-import React, {Component} from 'react';
+// In Scroll.js
+import React, { Component } from 'react';
 import { CourseBoxArray } from './CourseBoxArray';
 
-
-
-class Scroll extends  React.Component{
-
-    render(){
-        return(
-                <CourseBoxArray/>
-        )}
+class Scroll extends React.Component {
+  render() {
+    const { data } = this.props;
+    return (
+      <div className='scroll-container'>
+        <CourseBoxArray data={data} /> {/* Pass the fetched data to CourseBoxArray component */}
+      </div>
+    );
+  }
 }
 
-
-
-export {Scroll}
+export { Scroll };
 
 
 // import React, { Component } from 'react';

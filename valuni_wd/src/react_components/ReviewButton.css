@@ -1,0 +1,41 @@
+@import "../ConstColors.css";
+
+.btnRev{
+
+    background-color: var(--dark-2); 
+    color: var(--light-1); 
+    padding: 0.4em 1.35vw; 
+    border: none;
+    border-radius: 1.3rem; 
+    cursor: pointer;
+    text-align: center;
+    font-size: 3vh; 
+    font-weight: bold; 
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
+    transition: box-shadow 0.3s ease; 
+    }
+.btnRev :-webkit-any(:any-link){
+    text-decoration: none;
+    color: var(--light-1); 
+}
+
+.btnRev:active{
+    background-color: var(--acc-blue-light); 
+    box-shadow: none;
+}
+
+.btnRev:hover{
+    background-color: var(--acc-orange); 
+    box-shadow: 0.05em 0.05em 0.18em 0 rgba(0, 0, 0, 0.8); 
+} 
+
+.link { 
+  text-decoration: none;
+  color: var(--light-1); 
+  width: 100%; 
+  height: 100%;
+  
+}
+
+
