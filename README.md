@@ -1,5 +1,6 @@
 # valuni
 Software Engineering project for Fall 2023-2024 AUC, Online University Evaluation System 
+For SW architecture and UI references check ``documents`` directory
 
 ## How to setup 
  1. Clone the repo 
